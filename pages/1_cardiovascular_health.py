@@ -15,7 +15,7 @@ import statsmodels.api as sm
 
 @st.cache_resource
 def load_data():
-    url = "https://github.com/LaxmiVatsalyaDaita/CMSE830/blob/main/imputed_cardio_sleep.csv"
+    url = "https://raw.github.com/LaxmiVatsalyaDaita/CMSE830/blob/main/imputed_cardio_sleep.csv"
     #data = pd.read_csv('imputed_cardio_sleep.csv')
     data = pd.read_csv(url, delimiter=",")
     
