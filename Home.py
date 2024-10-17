@@ -109,8 +109,8 @@ elif sidebar_option == "About Heart Health":
     ## 4. Basic Descriptive Statistics
     Descriptive statistics such as mean, median, and standard deviation were calculated for each numeric variable.
     """)
-    sleep = pd.read_csv('sleep_health_and_lifestyle_dataset.csv')
-    heart = pd.read_csv('cardio_train.csv', delimiter=";")
+    sleep = pd.read_csv('https://raw.githubusercontent.com/LaxmiVatsalyaDaita/CMSE830/main/Sleep_health_and_lifestyle_dataset.csv')
+    heart = pd.read_csv('https://raw.githubusercontent.com/LaxmiVatsalyaDaita/CMSE830/main/cardio_train.csv', delimiter=";")
     st.write(sleep.describe())
     st.write(heart.describe())
 
