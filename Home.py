@@ -23,7 +23,7 @@ sidebar_option = st.sidebar.selectbox(
 def load_data():
     #data = pd.read_csv('new_merged.csv')
 
-    url = "https://raw.githubusercontent.com/LaxmiVatsalyaDaita/CMSE830/blob/main/new_merged.csv"
+    url = "https://raw.githubusercontent.com/LaxmiVatsalyaDaita/CMSE830/main/new_merged.csv"
     data = pd.read_csv(url, delimiter=",")
     df = data.copy()
     df.drop(['id', 'age', 'gender', 'age_years', 'BMI', 'height', 'weight'], axis=1, inplace=True)
