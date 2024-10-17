@@ -1,0 +1,196 @@
+id,Age_Cardio,gender,height,weight,bp_upper,bp_lower,cholesterol,gluc,smoke,alco,active,cardio,BMI,Gender,Age,Occupation,Sleep Duration,Quality of Sleep,Physical Activity Level,Stress Level,BMI Category,Heart Rate,Daily Steps,Sleep Disorder
+7078,52,Female,172,76.0,125,80,3,3,0,0,1,0,25.689561925365066,Female,52,Engineer,8.4,9,30,3,Normal,65,5000,No Disorder
+7078,52,Female,172,76.0,125,80,3,3,0,0,1,0,25.689561925365066,Female,52,Engineer,8.4,9,30,3,Normal,65,5000,No Disorder
+7078,52,Female,172,76.0,125,80,3,3,0,0,1,0,25.689561925365066,Female,52,Engineer,8.4,9,30,3,Normal,65,5000,No Disorder
+8850,29,Male,175,59.0,120,80,1,1,0,0,1,0,19.26530612244898,Male,29,Doctor,7.8,7,75,6,Normal,70,8000,No Disorder
+8850,29,Male,175,59.0,120,80,1,1,0,0,1,0,19.26530612244898,Male,29,Doctor,7.8,7,75,6,Normal,70,8000,No Disorder
+8850,29,Male,175,59.0,120,80,1,1,0,0,1,0,19.26530612244898,Male,29,Doctor,7.8,7,75,6,Normal,70,8000,No Disorder
+8850,29,Male,175,59.0,120,80,1,1,0,0,1,0,19.26530612244898,Male,29,Doctor,6.1,6,30,8,Normal,70,8000,No Disorder
+8850,29,Male,175,59.0,120,80,1,1,0,0,1,0,19.26530612244898,Male,29,Doctor,7.8,7,75,6,Normal,70,8000,No Disorder
+8850,29,Male,175,59.0,120,80,1,1,0,0,1,0,19.26530612244898,Male,29,Doctor,6.1,6,30,8,Normal,70,8000,No Disorder
+8850,29,Male,175,59.0,120,80,1,1,0,0,1,0,19.26530612244898,Male,29,Doctor,6.0,6,30,8,Normal,70,8000,No Disorder
+8850,29,Male,175,59.0,120,80,1,1,0,0,1,0,19.26530612244898,Male,29,Doctor,6.0,6,30,8,Normal,70,8000,No Disorder
+8850,29,Male,175,59.0,120,80,1,1,0,0,1,0,19.26530612244898,Male,29,Doctor,6.0,6,30,8,Normal,70,8000,No Disorder
+8850,29,Male,175,59.0,120,80,1,1,0,0,1,0,19.26530612244898,Male,29,Doctor,6.0,6,30,8,Normal,70,8000,Sleep Apnea
+9578,53,Female,175,62.0,125,80,1,1,0,0,1,0,20.244897959183675,Female,53,Engineer,8.3,9,30,3,Normal,65,5000,Insomnia
+9578,53,Female,175,62.0,125,80,1,1,0,0,1,0,20.244897959183675,Female,53,Engineer,8.5,9,30,3,Normal,65,5000,No Disorder
+9578,53,Female,175,62.0,125,80,1,1,0,0,1,0,20.244897959183675,Female,53,Engineer,8.5,9,30,3,Normal,65,5000,No Disorder
+9578,53,Female,175,62.0,125,80,1,1,0,0,1,0,20.244897959183675,Female,53,Engineer,8.4,9,30,3,Normal,65,5000,No Disorder
+9578,53,Female,175,62.0,125,80,1,1,0,0,1,0,20.244897959183675,Female,53,Engineer,8.4,9,30,3,Normal,65,5000,No Disorder
+9578,53,Female,175,62.0,125,80,1,1,0,0,1,0,20.244897959183675,Female,53,Engineer,8.5,9,30,3,Normal,65,5000,No Disorder
+9578,53,Female,175,62.0,125,80,1,1,0,0,1,0,20.244897959183675,Female,53,Engineer,8.4,9,30,3,Normal,65,5000,No Disorder
+9578,53,Female,175,62.0,125,80,1,1,0,0,1,0,20.244897959183675,Female,53,Engineer,8.4,9,30,3,Normal,65,5000,No Disorder
+9578,53,Female,175,62.0,125,80,1,1,0,0,1,0,20.244897959183675,Female,53,Engineer,8.5,9,30,3,Normal,65,5000,No Disorder
+9578,53,Female,175,62.0,125,80,1,1,0,0,1,0,20.244897959183675,Female,53,Engineer,8.3,9,30,3,Normal,65,5000,No Disorder
+9578,53,Female,175,62.0,125,80,1,1,0,0,1,0,20.244897959183675,Female,53,Engineer,8.5,9,30,3,Normal,65,5000,No Disorder
+9578,53,Female,175,62.0,125,80,1,1,0,0,1,0,20.244897959183675,Female,53,Engineer,8.3,9,30,3,Normal,65,5000,No Disorder
+9578,53,Female,175,62.0,125,80,1,1,0,0,1,0,20.244897959183675,Female,53,Engineer,8.5,9,30,3,Normal,65,5000,No Disorder
+9578,53,Female,175,62.0,125,80,1,1,0,0,1,0,20.244897959183675,Female,53,Engineer,8.3,9,30,3,Normal,65,5000,No Disorder
+9578,53,Female,175,62.0,125,80,1,1,0,0,1,0,20.244897959183675,Female,53,Engineer,8.5,9,30,3,Normal,65,5000,No Disorder
+9578,53,Female,175,62.0,125,80,1,1,0,0,1,0,20.244897959183675,Female,53,Engineer,8.5,9,30,3,Normal,65,5000,No Disorder
+9578,53,Female,175,62.0,125,80,1,1,0,0,1,0,20.244897959183675,Female,53,Engineer,8.4,9,30,3,Normal,65,5000,No Disorder
+11809,53,Female,176,80.0,125,80,1,1,1,1,1,0,25.826446280991735,Female,53,Engineer,8.3,9,30,3,Normal,65,5000,Insomnia
+11809,53,Female,176,80.0,125,80,1,1,1,1,1,0,25.826446280991735,Female,53,Engineer,8.5,9,30,3,Normal,65,5000,No Disorder
+11809,53,Female,176,80.0,125,80,1,1,1,1,1,0,25.826446280991735,Female,53,Engineer,8.5,9,30,3,Normal,65,5000,No Disorder
+11809,53,Female,176,80.0,125,80,1,1,1,1,1,0,25.826446280991735,Female,53,Engineer,8.4,9,30,3,Normal,65,5000,No Disorder
+11809,53,Female,176,80.0,125,80,1,1,1,1,1,0,25.826446280991735,Female,53,Engineer,8.4,9,30,3,Normal,65,5000,No Disorder
+11809,53,Female,176,80.0,125,80,1,1,1,1,1,0,25.826446280991735,Female,53,Engineer,8.5,9,30,3,Normal,65,5000,No Disorder
+11809,53,Female,176,80.0,125,80,1,1,1,1,1,0,25.826446280991735,Female,53,Engineer,8.4,9,30,3,Normal,65,5000,No Disorder
+11809,53,Female,176,80.0,125,80,1,1,1,1,1,0,25.826446280991735,Female,53,Engineer,8.4,9,30,3,Normal,65,5000,No Disorder
+11809,53,Female,176,80.0,125,80,1,1,1,1,1,0,25.826446280991735,Female,53,Engineer,8.5,9,30,3,Normal,65,5000,No Disorder
+11809,53,Female,176,80.0,125,80,1,1,1,1,1,0,25.826446280991735,Female,53,Engineer,8.3,9,30,3,Normal,65,5000,No Disorder
+11809,53,Female,176,80.0,125,80,1,1,1,1,1,0,25.826446280991735,Female,53,Engineer,8.5,9,30,3,Normal,65,5000,No Disorder
+11809,53,Female,176,80.0,125,80,1,1,1,1,1,0,25.826446280991735,Female,53,Engineer,8.3,9,30,3,Normal,65,5000,No Disorder
+11809,53,Female,176,80.0,125,80,1,1,1,1,1,0,25.826446280991735,Female,53,Engineer,8.5,9,30,3,Normal,65,5000,No Disorder
+11809,53,Female,176,80.0,125,80,1,1,1,1,1,0,25.826446280991735,Female,53,Engineer,8.3,9,30,3,Normal,65,5000,No Disorder
+11809,53,Female,176,80.0,125,80,1,1,1,1,1,0,25.826446280991735,Female,53,Engineer,8.5,9,30,3,Normal,65,5000,No Disorder
+11809,53,Female,176,80.0,125,80,1,1,1,1,1,0,25.826446280991735,Female,53,Engineer,8.5,9,30,3,Normal,65,5000,No Disorder
+11809,53,Female,176,80.0,125,80,1,1,1,1,1,0,25.826446280991735,Female,53,Engineer,8.4,9,30,3,Normal,65,5000,No Disorder
+16958,45,Female,180,85.0,135,90,3,1,1,0,1,1,26.234567901234566,Female,45,Teacher,6.8,7,30,6,Overweight,65,6000,Insomnia
+16958,45,Female,180,85.0,135,90,3,1,1,0,1,1,26.234567901234566,Female,45,Teacher,6.8,7,30,6,Overweight,65,6000,Insomnia
+16958,45,Female,180,85.0,135,90,3,1,1,0,1,1,26.234567901234566,Female,45,Teacher,6.5,7,45,4,Overweight,65,6000,Insomnia
+16958,45,Female,180,85.0,135,90,3,1,1,0,1,1,26.234567901234566,Female,45,Teacher,6.5,7,45,4,Overweight,65,6000,Insomnia
+16958,45,Female,180,85.0,135,90,3,1,1,0,1,1,26.234567901234566,Female,45,Teacher,6.5,7,45,4,Overweight,65,6000,Insomnia
+16958,45,Female,180,85.0,135,90,3,1,1,0,1,1,26.234567901234566,Female,45,Teacher,6.5,7,45,4,Overweight,65,6000,Insomnia
+16958,45,Female,180,85.0,135,90,3,1,1,0,1,1,26.234567901234566,Female,45,Teacher,6.6,7,45,4,Overweight,65,6000,Insomnia
+16958,45,Female,180,85.0,135,90,3,1,1,0,1,1,26.234567901234566,Female,45,Teacher,6.6,7,45,4,Overweight,65,6000,Insomnia
+16958,45,Female,180,85.0,135,90,3,1,1,0,1,1,26.234567901234566,Female,45,Teacher,6.6,7,45,4,Overweight,65,6000,Insomnia
+16958,45,Female,180,85.0,135,90,3,1,1,0,1,1,26.234567901234566,Female,45,Teacher,6.6,7,45,4,Overweight,65,6000,Insomnia
+16958,45,Female,180,85.0,135,90,3,1,1,0,1,1,26.234567901234566,Female,45,Teacher,6.6,7,45,4,Overweight,65,6000,Insomnia
+16958,45,Female,180,85.0,135,90,3,1,1,0,1,1,26.234567901234566,Female,45,Teacher,6.6,7,45,4,Overweight,65,6000,No Disorder
+16958,45,Female,180,85.0,135,90,3,1,1,0,1,1,26.234567901234566,Female,45,Teacher,6.6,7,45,4,Overweight,65,6000,No Disorder
+17839,39,Male,159,104.0,130,85,1,3,0,0,0,0,41.13761322732486,Male,39,Lawyer,7.2,8,60,5,Normal,68,8000,Insomnia
+17839,39,Male,159,104.0,130,85,1,3,0,0,0,0,41.13761322732486,Male,39,Lawyer,7.2,8,60,5,Normal,68,8000,No Disorder
+17839,39,Male,159,104.0,130,85,1,3,0,0,0,0,41.13761322732486,Male,39,Lawyer,7.2,8,60,5,Normal,68,8000,No Disorder
+17839,39,Male,159,104.0,130,85,1,3,0,0,0,0,41.13761322732486,Male,39,Lawyer,7.2,8,60,5,Normal,68,8000,No Disorder
+17839,39,Male,159,104.0,130,85,1,3,0,0,0,0,41.13761322732486,Male,39,Lawyer,7.2,8,60,5,Normal,68,8000,No Disorder
+17839,39,Male,159,104.0,130,85,1,3,0,0,0,0,41.13761322732486,Male,39,Lawyer,7.2,8,60,5,Normal,68,8000,No Disorder
+17839,39,Male,159,104.0,130,85,1,3,0,0,0,0,41.13761322732486,Male,39,Lawyer,7.2,8,60,5,Normal,68,8000,No Disorder
+17839,39,Male,159,104.0,130,85,1,3,0,0,0,0,41.13761322732486,Male,39,Lawyer,7.2,8,60,5,Normal,68,8000,No Disorder
+17839,39,Male,159,104.0,130,85,1,3,0,0,0,0,41.13761322732486,Male,39,Lawyer,7.2,8,60,5,Normal,68,8000,No Disorder
+17839,39,Male,159,104.0,130,85,1,3,0,0,0,0,41.13761322732486,Male,39,Lawyer,7.2,8,60,5,Normal,68,8000,No Disorder
+17839,39,Male,159,104.0,130,85,1,3,0,0,0,0,41.13761322732486,Male,39,Lawyer,7.2,8,60,5,Normal,68,8000,No Disorder
+21717,49,Female,170,97.0,140,95,2,1,0,1,1,1,33.564013840830455,Female,49,Nurse,6.2,6,90,8,Overweight,75,10000,No Disorder
+21717,49,Female,170,97.0,140,95,2,1,0,1,1,1,33.564013840830455,Female,49,Nurse,6.0,6,90,8,Overweight,75,10000,Sleep Apnea
+21717,49,Female,170,97.0,140,95,2,1,0,1,1,1,33.564013840830455,Female,49,Nurse,6.1,6,90,8,Overweight,75,10000,Sleep Apnea
+21717,49,Female,170,97.0,140,95,2,1,0,1,1,1,33.564013840830455,Female,49,Nurse,6.1,6,90,8,Overweight,75,10000,Sleep Apnea
+21717,49,Female,170,97.0,140,95,2,1,0,1,1,1,33.564013840830455,Female,49,Nurse,6.1,6,90,8,Overweight,75,10000,Sleep Apnea
+21717,49,Female,170,97.0,140,95,2,1,0,1,1,1,33.564013840830455,Female,49,Nurse,6.1,6,90,8,Overweight,75,10000,Sleep Apnea
+21717,49,Female,170,97.0,140,95,2,1,0,1,1,1,33.564013840830455,Female,49,Nurse,6.2,6,90,8,Overweight,75,10000,Sleep Apnea
+21717,49,Female,170,97.0,140,95,2,1,0,1,1,1,33.564013840830455,Female,49,Nurse,6.2,6,90,8,Overweight,75,10000,Sleep Apnea
+21717,49,Female,170,97.0,140,95,2,1,0,1,1,1,33.564013840830455,Female,49,Nurse,6.2,6,90,8,Overweight,75,10000,Sleep Apnea
+27263,40,Male,156,55.0,130,85,1,1,0,0,1,0,22.600262984878366,Male,40,Lawyer,7.9,8,90,5,Normal,68,8000,No Disorder
+27263,40,Male,156,55.0,130,85,1,1,0,0,1,0,22.600262984878366,Male,40,Lawyer,7.9,8,90,5,Normal,68,8000,No Disorder
+28353,50,Female,160,62.0,125,80,1,1,0,0,1,0,24.218749999999996,Female,50,Engineer,8.3,9,30,3,Normal,65,5000,No Disorder
+35845,51,Female,170,86.0,125,80,1,1,1,0,1,0,29.75778546712803,Female,51,Engineer,8.5,9,30,3,Normal,65,5000,No Disorder
+35845,51,Female,170,86.0,125,80,1,1,1,0,1,0,29.75778546712803,Female,51,Engineer,8.5,9,30,3,Normal,65,5000,No Disorder
+35845,51,Female,170,86.0,125,80,1,1,1,0,1,0,29.75778546712803,Female,51,Engineer,8.5,9,30,3,Normal,65,5000,No Disorder
+35845,51,Female,170,86.0,125,80,1,1,1,0,1,0,29.75778546712803,Female,51,Engineer,8.5,9,30,3,Normal,65,5000,No Disorder
+37046,50,Female,168,70.0,125,80,2,1,1,0,1,0,24.801587301587304,Female,50,Engineer,8.3,9,30,3,Normal,65,5000,No Disorder
+37235,49,Female,168,88.0,140,95,1,1,0,0,1,1,31.17913832199547,Female,49,Nurse,6.2,6,90,8,Overweight,75,10000,No Disorder
+37235,49,Female,168,88.0,140,95,1,1,0,0,1,1,31.17913832199547,Female,49,Nurse,6.0,6,90,8,Overweight,75,10000,Sleep Apnea
+37235,49,Female,168,88.0,140,95,1,1,0,0,1,1,31.17913832199547,Female,49,Nurse,6.1,6,90,8,Overweight,75,10000,Sleep Apnea
+37235,49,Female,168,88.0,140,95,1,1,0,0,1,1,31.17913832199547,Female,49,Nurse,6.1,6,90,8,Overweight,75,10000,Sleep Apnea
+37235,49,Female,168,88.0,140,95,1,1,0,0,1,1,31.17913832199547,Female,49,Nurse,6.1,6,90,8,Overweight,75,10000,Sleep Apnea
+37235,49,Female,168,88.0,140,95,1,1,0,0,1,1,31.17913832199547,Female,49,Nurse,6.1,6,90,8,Overweight,75,10000,Sleep Apnea
+37235,49,Female,168,88.0,140,95,1,1,0,0,1,1,31.17913832199547,Female,49,Nurse,6.2,6,90,8,Overweight,75,10000,Sleep Apnea
+37235,49,Female,168,88.0,140,95,1,1,0,0,1,1,31.17913832199547,Female,49,Nurse,6.2,6,90,8,Overweight,75,10000,Sleep Apnea
+37235,49,Female,168,88.0,140,95,1,1,0,0,1,1,31.17913832199547,Female,49,Nurse,6.2,6,90,8,Overweight,75,10000,Sleep Apnea
+37906,50,Female,182,81.0,125,80,1,1,0,0,0,0,24.453568409612362,Female,50,Engineer,8.3,9,30,3,Normal,65,5000,No Disorder
+42129,58,Female,170,85.0,140,95,3,1,0,0,1,1,29.411764705882355,Female,58,Nurse,8.0,9,75,3,Overweight,68,7000,Sleep Apnea
+42129,58,Female,170,85.0,140,95,3,1,0,0,1,1,29.411764705882355,Female,58,Nurse,8.0,9,75,3,Overweight,68,7000,Sleep Apnea
+42129,58,Female,170,85.0,140,95,3,1,0,0,1,1,29.411764705882355,Female,58,Nurse,8.0,9,75,3,Overweight,68,7000,Sleep Apnea
+42129,58,Female,170,85.0,140,95,3,1,0,0,1,1,29.411764705882355,Female,58,Nurse,8.0,9,75,3,Overweight,68,7000,Sleep Apnea
+42129,58,Female,170,85.0,140,95,3,1,0,0,1,1,29.411764705882355,Female,58,Nurse,8.0,9,75,3,Overweight,68,7000,Sleep Apnea
+42129,58,Female,170,85.0,140,95,3,1,0,0,1,1,29.411764705882355,Female,58,Nurse,8.0,9,75,3,Overweight,68,7000,Sleep Apnea
+43842,29,Male,159,59.0,120,80,1,1,0,0,1,0,23.337684427040067,Male,29,Doctor,7.8,7,75,6,Normal,70,8000,No Disorder
+43842,29,Male,159,59.0,120,80,1,1,0,0,1,0,23.337684427040067,Male,29,Doctor,7.8,7,75,6,Normal,70,8000,No Disorder
+43842,29,Male,159,59.0,120,80,1,1,0,0,1,0,23.337684427040067,Male,29,Doctor,7.8,7,75,6,Normal,70,8000,No Disorder
+43842,29,Male,159,59.0,120,80,1,1,0,0,1,0,23.337684427040067,Male,29,Doctor,6.1,6,30,8,Normal,70,8000,No Disorder
+43842,29,Male,159,59.0,120,80,1,1,0,0,1,0,23.337684427040067,Male,29,Doctor,7.8,7,75,6,Normal,70,8000,No Disorder
+43842,29,Male,159,59.0,120,80,1,1,0,0,1,0,23.337684427040067,Male,29,Doctor,6.1,6,30,8,Normal,70,8000,No Disorder
+43842,29,Male,159,59.0,120,80,1,1,0,0,1,0,23.337684427040067,Male,29,Doctor,6.0,6,30,8,Normal,70,8000,No Disorder
+43842,29,Male,159,59.0,120,80,1,1,0,0,1,0,23.337684427040067,Male,29,Doctor,6.0,6,30,8,Normal,70,8000,No Disorder
+43842,29,Male,159,59.0,120,80,1,1,0,0,1,0,23.337684427040067,Male,29,Doctor,6.0,6,30,8,Normal,70,8000,No Disorder
+43842,29,Male,159,59.0,120,80,1,1,0,0,1,0,23.337684427040067,Male,29,Doctor,6.0,6,30,8,Normal,70,8000,Sleep Apnea
+44814,57,Female,178,81.0,140,95,3,1,0,0,1,1,25.5649539199596,Female,57,Nurse,8.1,9,75,3,Overweight,68,7000,No Disorder
+44814,57,Female,178,81.0,140,95,3,1,0,0,1,1,25.5649539199596,Female,57,Nurse,8.2,9,75,3,Overweight,68,7000,Sleep Apnea
+44814,57,Female,178,81.0,140,95,3,1,0,0,1,1,25.5649539199596,Female,57,Nurse,8.2,9,75,3,Overweight,68,7000,Sleep Apnea
+44814,57,Female,178,81.0,140,95,3,1,0,0,1,1,25.5649539199596,Female,57,Nurse,8.2,9,75,3,Overweight,68,7000,Sleep Apnea
+44814,57,Female,178,81.0,140,95,3,1,0,0,1,1,25.5649539199596,Female,57,Nurse,8.2,9,75,3,Overweight,68,7000,Sleep Apnea
+44814,57,Female,178,81.0,140,95,3,1,0,0,1,1,25.5649539199596,Female,57,Nurse,8.2,9,75,3,Overweight,68,7000,Sleep Apnea
+44814,57,Female,178,81.0,140,95,3,1,0,0,1,1,25.5649539199596,Female,57,Nurse,8.1,9,75,3,Overweight,68,7000,Sleep Apnea
+44814,57,Female,178,81.0,140,95,3,1,0,0,1,1,25.5649539199596,Female,57,Nurse,8.1,9,75,3,Overweight,68,7000,Sleep Apnea
+44814,57,Female,178,81.0,140,95,3,1,0,0,1,1,25.5649539199596,Female,57,Nurse,8.1,9,75,3,Overweight,68,7000,Sleep Apnea
+47141,52,Female,179,89.0,125,80,1,1,0,0,1,0,27.776910832995224,Female,52,Engineer,8.4,9,30,3,Normal,65,5000,No Disorder
+47141,52,Female,179,89.0,125,80,1,1,0,0,1,0,27.776910832995224,Female,52,Engineer,8.4,9,30,3,Normal,65,5000,No Disorder
+47141,52,Female,179,89.0,125,80,1,1,0,0,1,0,27.776910832995224,Female,52,Engineer,8.4,9,30,3,Normal,65,5000,No Disorder
+47810,51,Female,174,84.0,125,80,1,1,1,0,1,0,27.74474831549742,Female,51,Engineer,8.5,9,30,3,Normal,65,5000,No Disorder
+47810,51,Female,174,84.0,125,80,1,1,1,0,1,0,27.74474831549742,Female,51,Engineer,8.5,9,30,3,Normal,65,5000,No Disorder
+47810,51,Female,174,84.0,125,80,1,1,1,0,1,0,27.74474831549742,Female,51,Engineer,8.5,9,30,3,Normal,65,5000,No Disorder
+47810,51,Female,174,84.0,125,80,1,1,1,0,1,0,27.74474831549742,Female,51,Engineer,8.5,9,30,3,Normal,65,5000,No Disorder
+52572,44,Male,157,56.0,130,85,1,1,0,0,1,0,22.7189744005842,Male,44,Salesperson,6.4,6,45,7,Overweight,72,6000,Insomnia
+52572,44,Male,157,56.0,130,85,1,1,0,0,1,0,22.7189744005842,Male,44,Salesperson,6.3,6,45,7,Overweight,72,6000,Insomnia
+52572,44,Male,157,56.0,130,85,1,1,0,0,1,0,22.7189744005842,Male,44,Salesperson,6.4,6,45,7,Overweight,72,6000,Insomnia
+52572,44,Male,157,56.0,130,85,1,1,0,0,1,0,22.7189744005842,Male,44,Salesperson,6.3,6,45,7,Overweight,72,6000,Insomnia
+52572,44,Male,157,56.0,130,85,1,1,0,0,1,0,22.7189744005842,Male,44,Salesperson,6.3,6,45,7,Overweight,72,6000,Insomnia
+52572,44,Male,157,56.0,130,85,1,1,0,0,1,0,22.7189744005842,Male,44,Salesperson,6.3,6,45,7,Overweight,72,6000,Insomnia
+52572,44,Male,157,56.0,130,85,1,1,0,0,1,0,22.7189744005842,Male,44,Salesperson,6.3,6,45,7,Overweight,72,6000,Insomnia
+52572,44,Male,157,56.0,130,85,1,1,0,0,1,0,22.7189744005842,Male,44,Salesperson,6.3,6,45,7,Overweight,72,6000,Insomnia
+52572,44,Male,157,56.0,130,85,1,1,0,0,1,0,22.7189744005842,Male,44,Salesperson,6.3,6,45,7,Overweight,72,6000,Insomnia
+52572,44,Male,157,56.0,130,85,1,1,0,0,1,0,22.7189744005842,Male,44,Salesperson,6.4,6,45,7,Overweight,72,6000,Insomnia
+52572,44,Male,157,56.0,130,85,1,1,0,0,1,0,22.7189744005842,Male,44,Salesperson,6.3,6,45,7,Overweight,72,6000,Insomnia
+52572,44,Male,157,56.0,130,85,1,1,0,0,1,0,22.7189744005842,Male,44,Salesperson,6.4,6,45,7,Overweight,72,6000,Insomnia
+52572,44,Male,157,56.0,130,85,1,1,0,0,1,0,22.7189744005842,Male,44,Salesperson,6.3,6,45,7,Overweight,72,6000,Insomnia
+52572,44,Male,157,56.0,130,85,1,1,0,0,1,0,22.7189744005842,Male,44,Salesperson,6.4,6,45,7,Overweight,72,6000,Insomnia
+52572,44,Male,157,56.0,130,85,1,1,0,0,1,0,22.7189744005842,Male,44,Salesperson,6.3,6,45,7,Overweight,72,6000,Insomnia
+52572,44,Male,157,56.0,130,85,1,1,0,0,1,0,22.7189744005842,Male,44,Salesperson,6.3,6,45,7,Overweight,72,6000,Insomnia
+52572,44,Male,157,56.0,130,85,1,1,0,0,1,0,22.7189744005842,Male,44,Engineer,6.8,7,45,7,Overweight,78,5000,Insomnia
+52572,44,Male,157,56.0,130,85,1,1,0,0,1,0,22.7189744005842,Male,44,Salesperson,6.4,6,45,7,Overweight,72,6000,No Disorder
+52572,44,Male,157,56.0,130,85,1,1,0,0,1,0,22.7189744005842,Male,44,Salesperson,6.5,6,45,7,Overweight,72,6000,No Disorder
+53530,51,Female,185,95.0,125,80,2,1,0,0,0,1,27.757487216946675,Female,51,Engineer,8.5,9,30,3,Normal,65,5000,No Disorder
+53530,51,Female,185,95.0,125,80,2,1,0,0,0,1,27.757487216946675,Female,51,Engineer,8.5,9,30,3,Normal,65,5000,No Disorder
+53530,51,Female,185,95.0,125,80,2,1,0,0,0,1,27.757487216946675,Female,51,Engineer,8.5,9,30,3,Normal,65,5000,No Disorder
+53530,51,Female,185,95.0,125,80,2,1,0,0,0,1,27.757487216946675,Female,51,Engineer,8.5,9,30,3,Normal,65,5000,No Disorder
+60158,54,Female,170,67.0,125,80,1,1,0,0,1,0,23.18339100346021,Female,54,Engineer,8.4,9,30,3,Normal,65,5000,No Disorder
+60158,54,Female,170,67.0,125,80,1,1,0,0,1,0,23.18339100346021,Female,54,Engineer,8.4,9,30,3,Normal,65,5000,No Disorder
+60158,54,Female,170,67.0,125,80,1,1,0,0,1,0,23.18339100346021,Female,54,Engineer,8.4,9,30,3,Normal,65,5000,No Disorder
+60158,54,Female,170,67.0,125,80,1,1,0,0,1,0,23.18339100346021,Female,54,Engineer,8.4,9,30,3,Normal,65,5000,No Disorder
+60158,54,Female,170,67.0,125,80,1,1,0,0,1,0,23.18339100346021,Female,54,Engineer,8.4,9,30,3,Normal,65,5000,No Disorder
+60158,54,Female,170,67.0,125,80,1,1,0,0,1,0,23.18339100346021,Female,54,Engineer,8.4,9,30,3,Normal,65,5000,No Disorder
+60158,54,Female,170,67.0,125,80,1,1,0,0,1,0,23.18339100346021,Female,54,Engineer,8.5,9,30,3,Normal,65,5000,No Disorder
+62313,50,Female,167,58.0,125,80,1,1,0,0,0,1,20.796729893506402,Female,50,Engineer,8.3,9,30,3,Normal,65,5000,No Disorder
+74026,51,Female,176,95.0,125,80,1,2,0,0,1,0,30.668904958677686,Female,51,Engineer,8.5,9,30,3,Normal,65,5000,No Disorder
+74026,51,Female,176,95.0,125,80,1,2,0,0,1,0,30.668904958677686,Female,51,Engineer,8.5,9,30,3,Normal,65,5000,No Disorder
+74026,51,Female,176,95.0,125,80,1,2,0,0,1,0,30.668904958677686,Female,51,Engineer,8.5,9,30,3,Normal,65,5000,No Disorder
+74026,51,Female,176,95.0,125,80,1,2,0,0,1,0,30.668904958677686,Female,51,Engineer,8.5,9,30,3,Normal,65,5000,No Disorder
+78346,54,Female,174,84.0,125,80,1,1,0,0,1,0,27.74474831549742,Female,54,Engineer,8.4,9,30,3,Normal,65,5000,No Disorder
+78346,54,Female,174,84.0,125,80,1,1,0,0,1,0,27.74474831549742,Female,54,Engineer,8.4,9,30,3,Normal,65,5000,No Disorder
+78346,54,Female,174,84.0,125,80,1,1,0,0,1,0,27.74474831549742,Female,54,Engineer,8.4,9,30,3,Normal,65,5000,No Disorder
+78346,54,Female,174,84.0,125,80,1,1,0,0,1,0,27.74474831549742,Female,54,Engineer,8.4,9,30,3,Normal,65,5000,No Disorder
+78346,54,Female,174,84.0,125,80,1,1,0,0,1,0,27.74474831549742,Female,54,Engineer,8.4,9,30,3,Normal,65,5000,No Disorder
+78346,54,Female,174,84.0,125,80,1,1,0,0,1,0,27.74474831549742,Female,54,Engineer,8.4,9,30,3,Normal,65,5000,No Disorder
+78346,54,Female,174,84.0,125,80,1,1,0,0,1,0,27.74474831549742,Female,54,Engineer,8.5,9,30,3,Normal,65,5000,No Disorder
+86927,52,Female,164,113.0,125,80,3,3,0,0,0,1,42.013682331945276,Female,52,Engineer,8.4,9,30,3,Normal,65,5000,No Disorder
+86927,52,Female,164,113.0,125,80,3,3,0,0,0,1,42.013682331945276,Female,52,Engineer,8.4,9,30,3,Normal,65,5000,No Disorder
+86927,52,Female,164,113.0,125,80,3,3,0,0,0,1,42.013682331945276,Female,52,Engineer,8.4,9,30,3,Normal,65,5000,No Disorder
+87473,52,Female,168,78.0,130,85,1,1,0,0,1,0,27.636054421768712,Female,52,Accountant,6.5,7,45,7,Overweight,72,6000,Insomnia
+87473,52,Female,168,78.0,130,85,1,1,0,0,1,0,27.636054421768712,Female,52,Accountant,6.5,7,45,7,Overweight,72,6000,Insomnia
+87473,52,Female,168,78.0,130,85,1,1,0,0,1,0,27.636054421768712,Female,52,Accountant,6.6,7,45,7,Overweight,72,6000,Insomnia
+87473,52,Female,168,78.0,130,85,1,1,0,0,1,0,27.636054421768712,Female,52,Accountant,6.6,7,45,7,Overweight,72,6000,Insomnia
+87473,52,Female,168,78.0,130,85,1,1,0,0,1,0,27.636054421768712,Female,52,Accountant,6.6,7,45,7,Overweight,72,6000,Insomnia
+87473,52,Female,168,78.0,130,85,1,1,0,0,1,0,27.636054421768712,Female,52,Accountant,6.6,7,45,7,Overweight,72,6000,Insomnia
+90058,52,Female,176,91.0,125,80,3,3,0,0,1,0,29.3775826446281,Female,52,Engineer,8.4,9,30,3,Normal,65,5000,No Disorder
+90058,52,Female,176,91.0,125,80,3,3,0,0,1,0,29.3775826446281,Female,52,Engineer,8.4,9,30,3,Normal,65,5000,No Disorder
+90058,52,Female,176,91.0,125,80,3,3,0,0,1,0,29.3775826446281,Female,52,Engineer,8.4,9,30,3,Normal,65,5000,No Disorder
+91796,51,Female,176,85.0,125,80,3,2,0,0,1,1,27.44059917355372,Female,51,Engineer,8.5,9,30,3,Normal,65,5000,No Disorder
+91796,51,Female,176,85.0,125,80,3,2,0,0,1,1,27.44059917355372,Female,51,Engineer,8.5,9,30,3,Normal,65,5000,No Disorder
+91796,51,Female,176,85.0,125,80,3,2,0,0,1,1,27.44059917355372,Female,51,Engineer,8.5,9,30,3,Normal,65,5000,No Disorder
+91796,51,Female,176,85.0,125,80,3,2,0,0,1,1,27.44059917355372,Female,51,Engineer,8.5,9,30,3,Normal,65,5000,No Disorder
+94526,52,Female,176,85.0,125,80,1,1,0,0,1,0,27.44059917355372,Female,52,Engineer,8.4,9,30,3,Normal,65,5000,No Disorder
+94526,52,Female,176,85.0,125,80,1,1,0,0,1,0,27.44059917355372,Female,52,Engineer,8.4,9,30,3,Normal,65,5000,No Disorder
+94526,52,Female,176,85.0,125,80,1,1,0,0,1,0,27.44059917355372,Female,52,Engineer,8.4,9,30,3,Normal,65,5000,No Disorder
+97457,51,Female,174,74.0,125,80,1,1,0,0,1,0,24.441802087462015,Female,51,Engineer,8.5,9,30,3,Normal,65,5000,No Disorder
+97457,51,Female,174,74.0,125,80,1,1,0,0,1,0,24.441802087462015,Female,51,Engineer,8.5,9,30,3,Normal,65,5000,No Disorder
+97457,51,Female,174,74.0,125,80,1,1,0,0,1,0,24.441802087462015,Female,51,Engineer,8.5,9,30,3,Normal,65,5000,No Disorder
+97457,51,Female,174,74.0,125,80,1,1,0,0,1,0,24.441802087462015,Female,51,Engineer,8.5,9,30,3,Normal,65,5000,No Disorder
