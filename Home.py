@@ -24,7 +24,7 @@ def load_data():
     #data = pd.read_csv('new_merged.csv')
 
     url = "https://github.com/LaxmiVatsalyaDaita/CMSE830/blob/main/new_merged.csv"
-    data = pd.read_csv(url)
+    data = pd.read_csv(url, delimiter=",")
     df = data.copy()
     df.drop(['id', 'age', 'gender', 'age_years', 'BMI', 'height', 'weight'], axis=1, inplace=True)
     df = df.rename(columns={"cardio": "heart_risk"})
