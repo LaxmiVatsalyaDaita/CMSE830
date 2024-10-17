@@ -17,7 +17,7 @@ import statsmodels.api as sm
 def load_data():
     url = "https://github.com/LaxmiVatsalyaDaita/CMSE830/blob/main/imputed_cardio_sleep.csv"
     #data = pd.read_csv('imputed_cardio_sleep.csv')
-    data = pd.read_csv(url)
+    data = pd.read_csv(url, delimiter=",")
     
     # Round off the values to the nearest integer for categorical variables
     data['gluc'] = data['gluc'].round().astype(int)
