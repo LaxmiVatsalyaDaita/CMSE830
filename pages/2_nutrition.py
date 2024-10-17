@@ -16,7 +16,7 @@ st.set_page_config(page_title="Nutrition EDA Dashboard", page_icon="🍎", layou
 def load_data():
     url = "https://github.com/LaxmiVatsalyaDaita/CMSE830/blob/main/pages/nutrition_cleaned.csv"
     #data = pd.read_csv('nutrition_cleaned.csv')
-    data = pd.read_csv(url)
+    data = pd.read_csv(url, delimiter=",")
     return data
 
 df = load_data()
