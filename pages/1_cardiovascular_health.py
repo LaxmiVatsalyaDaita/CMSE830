@@ -254,24 +254,3 @@ elif options == 'Pattern and Trend Identification':
     
     fig = px.scatter(filtered_data, x=time_var, y=y_var, color='Gender', title=f'Trend Plot: {time_var} over {y_var}')
     st.plotly_chart(fig)
-
-# Hypothesis Generation
-elif options == 'Hypothesis Generation':
-
-    st.subheader('Scatter Plot of Sleep Duration vs Heart Risk')
-    fig, ax = plt.subplots()
-    sns.regplot(x='Sleep Duration', y='heart_risk', data=filtered_data, ax=ax)
-    ax.set_title('Sleep Duration vs Heart Risk with Regression Line')
-    st.pyplot(fig)
-
-    # Correlation Heatmap Example
-    st.subheader('Correlation Heatmap of Sleep Health Metrics and Heart Risk')
-    sleep_health_cols = ['Sleep Duration', 'Quality of Sleep', 'heart_risk']  # Add relevant columns
-    correlation_matrix = filtered_data[sleep_health_cols].corr()
-    
-    fig, ax = plt.subplots()
-    sns.heatmap(correlation_matrix, annot=True, fmt='.2f', cmap='coolwarm', ax=ax)
-    ax.set_title('Correlation Heatmap of Sleep Health and Heart Risk')
-    st.pyplot(fig)
-
-# Regression Analysis
