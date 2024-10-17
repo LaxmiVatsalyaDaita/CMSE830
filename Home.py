@@ -13,7 +13,7 @@ st.set_page_config(
 )
 
 # Sidebar selection
-sidebar_option = st.sidebar.selectbox(
+sidebar_option = st.sidebar.radio(
     "Select an option",
     ("Overview", "About Heart Health", "About Nutrition Data")
 )
