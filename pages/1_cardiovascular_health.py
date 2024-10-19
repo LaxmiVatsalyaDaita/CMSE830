@@ -257,7 +257,7 @@ elif options == 'Pattern and Trend Identification':
     st.plotly_chart(fig)
 
 elif options == 'Hypothesis Generation':
-    st.subheader('Distribution of Age by Heart Risk Categories')
+    st.header('Distribution of Age by Heart Risk Categories')
     
     # Plot distribution of Age for different heart_risk categories
     fig, ax = plt.subplots()
