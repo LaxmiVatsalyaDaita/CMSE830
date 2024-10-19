@@ -293,6 +293,7 @@ elif options == 'Hypothesis Generation':
     st.write("2. Testing whether there is a significant relationship between Sleep Disorder and Heart Risk.")
     
     # Perform chi-square test of independence
+    sleep_heart_risk_ct = pd.crosstab(filtered_data['Sleep Disorder'], filtered_data['heart_risk'])
     chi2, p, dof, expected = stats.chi2_contingency(sleep_heart_risk_ct)
     
     st.write(f"Chi-Square Statistic: {chi2:.4f}")
