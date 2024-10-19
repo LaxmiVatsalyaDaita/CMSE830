@@ -257,15 +257,34 @@ elif options == 'Pattern and Trend Identification':
     st.plotly_chart(fig)
 
 elif options == 'Hypothesis Generation':
-    st.header('Distribution of Age by Heart Risk Categories')
+    st.subheader('Distribution of Age by Heart Risk Categories')
     
     # Plot distribution of Age for different heart_risk categories
     fig, ax = plt.subplots()
     sns.histplot(data=filtered_data, x='Age', hue='heart_risk', multiple='stack', kde=True, ax=ax)
-    ax.set_title('Age Distribution by Heart Risk')
+    ax.set_title('Older individuals are more prone to cardiovascular issues')
     st.pyplot(fig)
 
     st.markdown("""
     The plot shows the age distribution of individuals based on their heart risk. It reveals that the risk of heart disease increases with age, with the highest proportion of individuals with heart risk found in the age group of 45-50. Younger individuals are more likely to have no heart risk, but as age increases, the proportion of individuals without heart risk decreases. The density curves overlaid on the histograms provide a smoother representation of the age distributions, helping to visualize the underlying probability distributions and identify patterns or trends. Overall, the plot suggests a strong association between age and heart risk, highlighting the importance of targeting preventive measures and interventions for heart disease in high-risk populations.
     """)
+
+    # Explore relationship between Physical Activity Level, BMI Category, and Quality of Sleep
+    st.subheader('Physical Activity vs BMI Category and Quality of Sleep')
+    
+    # Select the variables of interest
+    activity_var = 'Physical Activity Level'
+    bmi_var = 'BMI Category'
+    sleep_quality_var = 'Quality of Sleep'
+    
+    # Create a grouped bar plot to show the relationship between these variables
+    fig, ax = plt.subplots(figsize=(10, 6))
+    
+    # Grouping data by physical activity and plotting the mean BMI and sleep quality
+    sns.barplot(data=filtered_data, x=activity_var, y='BMI', hue=sleep_quality_var, ax=ax)
+    ax.set_title('Relationship between Physical Activity, BMI, and Sleep Quality')
+    ax.set_xlabel('Physical Activity Level')
+    ax.set_ylabel('BMI')
+    
+    st.pyplot(fig)
 
