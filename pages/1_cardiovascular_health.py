@@ -265,3 +265,7 @@ elif options == 'Hypothesis Generation':
     ax.set_title('Age Distribution by Heart Risk')
     st.pyplot(fig)
 
+    st.markdown("""
+    The plot shows the age distribution of individuals based on their heart risk. It reveals that the risk of heart disease increases with age, with the highest proportion of individuals with heart risk found in the age group of 45-50. Younger individuals are more likely to have no heart risk, but as age increases, the proportion of individuals without heart risk decreases. The density curves overlaid on the histograms provide a smoother representation of the age distributions, helping to visualize the underlying probability distributions and identify patterns or trends. Overall, the plot suggests a strong association between age and heart risk, highlighting the importance of targeting preventive measures and interventions for heart disease in high-risk populations.
+    """)
+
