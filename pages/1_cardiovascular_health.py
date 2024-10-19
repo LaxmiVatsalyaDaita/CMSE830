@@ -130,14 +130,7 @@ elif options == 'Bivariate Analysis':
     
     st.write(pd.crosstab(filtered_data[cat_var1], filtered_data[cat_var2]))
 
-    st.subheader('Distribution of Age by Heart Risk Categories')
     
-    # Plot distribution of Age for different heart_risk categories
-    fig, ax = plt.subplots()
-    sns.histplot(data=filtered_data, x='Age', hue='heart_risk', multiple='stack', kde=True, ax=ax)
-    ax.set_title('Age Distribution by Heart Risk')
-    st.pyplot(fig)
-
 # Multivariate Analysis
 elif options == 'Multivariate Analysis':
     st.header('Multivariate Analysis')
@@ -262,3 +255,13 @@ elif options == 'Pattern and Trend Identification':
     
     fig = px.scatter(filtered_data, x=time_var, y=y_var, color='Gender', title=f'Trend Plot: {time_var} over {y_var}')
     st.plotly_chart(fig)
+
+elif options == 'Hypothesis Generation':
+    st.subheader('Distribution of Age by Heart Risk Categories')
+    
+    # Plot distribution of Age for different heart_risk categories
+    fig, ax = plt.subplots()
+    sns.histplot(data=filtered_data, x='Age', hue='heart_risk', multiple='stack', kde=True, ax=ax)
+    ax.set_title('Age Distribution by Heart Risk')
+    st.pyplot(fig)
+
