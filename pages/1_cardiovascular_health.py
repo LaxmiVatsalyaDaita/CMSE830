@@ -273,7 +273,7 @@ elif options == 'Hypothesis Generation':
     st.subheader('Physical Activity vs BMI Category and Quality of Sleep')
     
     #st.subheader("Chi-Square Test of Independence")
-    st.write("1. Testing whether there is a significant relationship between Physical Activity, BMI, and Sleep Quality.")
+    st.write("Testing whether there is a significant relationship between Physical Activity, BMI, and Sleep Quality.")
     
     # Perform chi-square test of independence
     contingency_table = pd.crosstab(filtered_data['Physical Activity Level'], 
@@ -289,7 +289,8 @@ elif options == 'Hypothesis Generation':
         st.write("Result: The p-value is less than 0.05, so we reject the null hypothesis. This indicates that there is a significant relationship between Physical Activity, BMI, and Sleep Quality.")
     else:
         st.write("Result: The p-value is greater than 0.05, so we fail to reject the null hypothesis. This suggests that there is no significant relationship between Physical Activity, BMI, and Sleep Quality.")
-
+    
+    st.subheader('Sleep Disorder vs Heart Risk')
     st.write("2. Testing whether there is a significant relationship between Sleep Disorder and Heart Risk.")
     
     # Perform chi-square test of independence
