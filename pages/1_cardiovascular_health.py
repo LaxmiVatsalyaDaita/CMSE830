@@ -130,6 +130,14 @@ elif options == 'Bivariate Analysis':
     
     st.write(pd.crosstab(filtered_data[cat_var1], filtered_data[cat_var2]))
 
+    st.subheader('Distribution of Age by Heart Risk Categories')
+    
+    # Plot distribution of Age for different heart_risk categories
+    fig, ax = plt.subplots()
+    sns.histplot(data=filtered_data, x='Age', hue='heart_risk', multiple='stack', kde=True, ax=ax)
+    ax.set_title('Age Distribution by Heart Risk')
+    st.pyplot(fig)
+
 # Multivariate Analysis
 elif options == 'Multivariate Analysis':
     st.header('Multivariate Analysis')
