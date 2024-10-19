@@ -272,19 +272,21 @@ elif options == 'Hypothesis Generation':
     # Explore relationship between Physical Activity Level, BMI Category, and Quality of Sleep
     st.subheader('Physical Activity vs BMI Category and Quality of Sleep')
     
-    # Select the variables of interest
-    activity_var = 'Physical Activity Level'
-    bmi_var = 'BMI Category'
-    sleep_quality_var = 'Quality of Sleep'
+    #st.subheader("Chi-Square Test of Independence")
+    st.write("Testing whether there is a significant relationship between Physical Activity, BMI, and Sleep Quality.")
     
-    # Create a grouped bar plot to show the relationship between these variables
-    fig, ax = plt.subplots(figsize=(10, 6))
+    # Perform chi-square test of independence
+    contingency_table = pd.crosstab(filtered_data['Physical Activity Level'], 
+                                    [filtered_data['BMI Category'], filtered_data['Quality of Sleep']])
+    chi2, p, dof, expected = stats.chi2_contingency(contingency_table)
     
-    # Grouping data by physical activity and plotting the mean BMI and sleep quality
-    sns.barplot(data=filtered_data, x=activity_var, y='BMI', hue=sleep_quality_var, ax=ax)
-    ax.set_title('Relationship between Physical Activity, BMI, and Sleep Quality')
-    ax.set_xlabel('Physical Activity Level')
-    ax.set_ylabel('BMI')
+    st.write(f"Chi-Square Statistic: {chi2:.4f}")
+    st.write(f"P-value: {p:.4f}")
+    st.write(f"Degrees of Freedom: {dof}")
     
-    st.pyplot(fig)
+    # Interpret the p-value
+    if p < 0.05:
+        st.write("Result: The p-value is less than 0.05, so we reject the null hypothesis. This indicates that there is a significant relationship between Physical Activity, BMI, and Sleep Quality.")
+    else:
+        st.write("Result: The p-value is greater than 0.05, so we fail to reject the null hypothesis. This suggests that there is no significant relationship between Physical Activity, BMI, and Sleep Quality.")
 
