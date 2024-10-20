@@ -57,7 +57,7 @@ else:
     analysis_type = st.sidebar.selectbox("Select Analysis Type", 
                                          ["Univariate Analysis", "Bivariate Analysis", "Multivariate Analysis", 
                                           "Correlation Analysis", "Dimensionality Assessment", 
-                                          "Pattern and Trend Identification", "Hypothesis Generation"])
+                                          "Pattern and Trend Identification"])
     
 
 
@@ -230,18 +230,18 @@ else:
         fig.update_layout(title=f"{nutrient} Distribution Across Categories")
         st.plotly_chart(fig, use_container_width=True)
 
-    elif analysis_type == "Hypothesis Generation":
-        st.header("7. Hypothesis Generation")
+    # elif analysis_type == "Hypothesis Generation":
+    #     st.header("7. Hypothesis Generation")
         
-        st.write("Based on the exploratory data analysis, we can generate the following hypotheses:")
+    #     st.write("Based on the exploratory data analysis, we can generate the following hypotheses:")
         
-        st.write("1. There might be a strong positive correlation between calorie content and fat content in foods.")
-        st.write("2. Certain food categories may have significantly higher protein content than others.")
-        st.write("3. The fiber content might be inversely related to the calorie density of foods.")
-        st.write("4. There could be distinct clusters of foods based on their nutritional profiles.")
+    #     st.write("1. There might be a strong positive correlation between calorie content and fat content in foods.")
+    #     st.write("2. Certain food categories may have significantly higher protein content than others.")
+    #     st.write("3. The fiber content might be inversely related to the calorie density of foods.")
+    #     st.write("4. There could be distinct clusters of foods based on their nutritional profiles.")
         
-        st.write("To investigate these hypotheses, we would need to perform more detailed statistical analyses, "
-                 "such as hypothesis tests, regression analyses, or clustering algorithms.")
+    #     st.write("To investigate these hypotheses, we would need to perform more detailed statistical analyses, "
+    #              "such as hypothesis tests, regression analyses, or clustering algorithms.")
 
     # Footer
     st.markdown("---")
