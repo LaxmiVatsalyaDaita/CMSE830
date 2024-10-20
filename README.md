@@ -1,6 +1,4 @@
-# CMSE830 - Streamlit App
-
-# Nourish and Rest
+# CMSE830 - Nourish and Rest (A Streamlit App)
 
 The web application has been deployed [here](https://cmse830-midterm.streamlit.app/) using *streamlit.io*
 
