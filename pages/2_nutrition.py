@@ -14,10 +14,34 @@ st.set_page_config(page_title="Nutrition EDA Dashboard", page_icon="🍎", layou
 # Load the data
 @st.cache_data
 def load_data():
-    url = "https://raw.githubusercontent.com/LaxmiVatsalyaDaita/CMSE830/pages/nutrition_cleaned.csv"
-    #data = pd.read_csv('nutrition_cleaned.csv')
-    data = pd.read_csv(url, delimiter=",")
-    return data
+    # url = "https://raw.githubusercontent.com/LaxmiVatsalyaDaita/CMSE830/pages/nutrition_cleaned.csv"
+    # #data = pd.read_csv('nutrition_cleaned.csv')
+    # data = pd.read_csv(url, delimiter=",")
+    # return data
+
+    try:
+        url = "https://raw.githubusercontent.com/LaxmiVatsalyaDaita/CMSE830/main/nutrition_cleaned.csv"
+        return pd.read_csv(url)
+    except (urllib.error.HTTPError, pd.errors.EmptyDataError) as e:
+        st.warning(f"Could not load data from primary URL. Trying alternate source...")
+        try:
+            # Try alternate URL (master branch instead of main)
+            url_alt = "https://raw.githubusercontent.com/LaxmiVatsalyaDaita/CMSE830/master/nutrition_cleaned.csv"
+            return pd.read_csv(url_alt)
+        except Exception as e:
+            try:
+                # Try local file as last resort
+                return pd.read_csv('nutrition_cleaned.csv')
+            except Exception as e:
+                st.error("""
+                Failed to load data from all sources. Please ensure:
+                1. The file exists in the repository
+                2. The file path is correct
+                3. The repository is public
+                4. You have the file locally if all else fails
+                
+                Error details: """ + str(e))
+                return None
 
 df = load_data()
 
