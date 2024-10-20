@@ -37,7 +37,7 @@ if sidebar_option == "Overview":
     st.markdown("""
 # 💤 Why Sleep and Nutrition Matter for Overall Well-Being 🥦
 
-Sleep and nutrition are two fundamental pillars of health that significantly impact our physical, mental, and emotional well-being. Understanding the relationship between these two components can empower individuals to make informed lifestyle choices that enhance their quality of life.
+Sleep and nutrition are two fundamental pillars of health that significantly impact our physical, mental, and emotional well-being. Understanding the relationship between sleep and various health factors can empower individuals to make informed lifestyle choices that enhance their quality of life.
 
 ## The Role of Sleep
 
