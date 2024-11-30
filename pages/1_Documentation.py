@@ -23,7 +23,7 @@ def tab2_options():
         ['Univariate Analysis', 'Bivariate Analysis', 'Multivariate Analysis', 
         'Correlation Analysis', 'Dimensionality Assessment', 
         'Pattern and Trend Identification', 'Hypothesis Generation'])
-    return options
+    
 
     # Sidebar filters for dataset slicing
     min_age, max_age = st.sidebar.slider('Select Age Range', int(data['Age'].min()), int(data['Age'].max()), (25, 50))
@@ -31,6 +31,7 @@ def tab2_options():
 
     st.sidebar.subheader('Color Palette for Plots')
     palette = st.sidebar.selectbox('Select color palette:', sns.color_palette().as_hex(), index=2)
+    return filtered_data, palette, min_age, max_age, options
 
 def tab3_options():
     st.sidebar.header("Navigation")
@@ -38,6 +39,7 @@ def tab3_options():
                                         ["Univariate Analysis", "Bivariate Analysis", "Multivariate Analysis", 
                                         "Correlation Analysis", "Dimensionality Assessment", 
                                         "Pattern and Trend Identification"])
+    return analysis_type
 
 tab1, tab2, tab3 = st.tabs(["About Datasets", "Sleep and Cardiovascular Health", "Nutrition"])
 
@@ -311,7 +313,7 @@ with tab2:
     # st.sidebar.subheader('Color Palette for Plots')
     # palette = st.sidebar.selectbox('Select color palette:', sns.color_palette().as_hex(), index=2)
 
-    options = tab2_options()
+    filtered_data, palette, min_age, max_age, options = tab2_options()
 
     # Univariate Analysis
     if options == 'Univariate Analysis':
@@ -612,7 +614,7 @@ with tab3:
         #                                     ["Univariate Analysis", "Bivariate Analysis", "Multivariate Analysis", 
         #                                     "Correlation Analysis", "Dimensionality Assessment", 
         #                                     "Pattern and Trend Identification"])
-        tab3_options()
+        analysis_type = tab3_options()
 
 
         # Main content
