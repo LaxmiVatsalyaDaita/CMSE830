@@ -25,7 +25,7 @@ df = load_data()
 
 # Create tabs for navigation
 with st.container():
-    tab1, tab2, tab3 = st.tabs(["Overview", "Risk Prediction", "BMI Calculator", "Tips for a better"])
+    tab1, tab2, tab3, tab4 = st.tabs(["Overview", "Risk Prediction", "BMI Calculator", "Tips for a better"])
 
     with tab1:
         st.markdown("""
