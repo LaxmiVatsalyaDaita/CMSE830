@@ -11,31 +11,31 @@ from scipy import stats
 #tabs = st.tabs(["Tab 1: Sleep and Cardiovascular Health", "Tab 2: Nutrition"])
 
 def tab1_options():
-    sidebar_option = st.sidebar.radio(
+    sidebar_option = st.radio(
         "Select an option",
         ("About Heart Health", "About Nutrition Data")
     )
     return sidebar_option
 
 def tab2_options():
-    st.sidebar.title('Navigation')
-    options = st.sidebar.selectbox('Select a section:', 
+    st.title('Navigation')
+    options = st.selectbox('Select a section:', 
         ['Univariate Analysis', 'Bivariate Analysis', 'Multivariate Analysis', 
         'Correlation Analysis', 'Dimensionality Assessment', 
         'Pattern and Trend Identification', 'Hypothesis Generation'])
     
 
     # Sidebar filters for dataset slicing
-    min_age, max_age = st.sidebar.slider('Select Age Range', int(data['Age'].min()), int(data['Age'].max()), (25, 50))
+    min_age, max_age = st.slider('Select Age Range', int(data['Age'].min()), int(data['Age'].max()), (25, 50))
     filtered_data = data[(data['Age'] >= min_age) & (data['Age'] <= max_age)]
 
-    st.sidebar.subheader('Color Palette for Plots')
-    palette = st.sidebar.selectbox('Select color palette:', sns.color_palette().as_hex(), index=2)
+    st.subheader('Color Palette for Plots')
+    palette = st.selectbox('Select color palette:', sns.color_palette().as_hex(), index=2)
     return filtered_data, palette, min_age, max_age, options
 
 def tab3_options():
-    st.sidebar.header("Navigation")
-    analysis_type = st.sidebar.selectbox("Select Analysis Type", 
+    st.header("Navigation")
+    analysis_type = st.selectbox("Select Analysis Type", 
                                         ["Univariate Analysis", "Bivariate Analysis", "Multivariate Analysis", 
                                         "Correlation Analysis", "Dimensionality Assessment", 
                                         "Pattern and Trend Identification"])
@@ -50,6 +50,7 @@ with tab1:
     #     ("About Heart Health", "About Nutrition Data")
     # )
 
+    
     sidebar_option = tab1_options()
 
     # Load the data
@@ -313,6 +314,8 @@ with tab2:
     # st.sidebar.subheader('Color Palette for Plots')
     # palette = st.sidebar.selectbox('Select color palette:', sns.color_palette().as_hex(), index=2)
 
+
+    
     filtered_data, palette, min_age, max_age, options = tab2_options()
 
     # Univariate Analysis
@@ -614,6 +617,8 @@ with tab3:
         #                                     ["Univariate Analysis", "Bivariate Analysis", "Multivariate Analysis", 
         #                                     "Correlation Analysis", "Dimensionality Assessment", 
         #                                     "Pattern and Trend Identification"])
+        
+        
         analysis_type = tab3_options()
 
 
@@ -801,4 +806,4 @@ with tab3:
 
         # Footer
         st.markdown("---")
-        st.markdown("Data source: nutrients_cleaned.csv")
+        st.markdown("By: Laxmi Vatsalya Daita")
