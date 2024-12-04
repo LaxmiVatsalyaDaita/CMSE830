@@ -25,7 +25,7 @@ df = load_data()
 
 # Create tabs for navigation
 with st.container():
-    tab1, tab2, tab3, tab4 = st.tabs(["Overview", "Risk Prediction", "BMI Calculator", "Tips for a better"])
+    tab1, tab2, tab3, tab4 = st.tabs(["Overview", "Risk Prediction", "BMI Calculator", "Ask for Nutrition Tips"])
 
     with tab1:
         st.markdown("""
@@ -65,83 +65,183 @@ with st.container():
         import streamlit as st
         import numpy as np
 
-        # Set page configuration and custom styles
-        #st.set_page_config(page_title="Health Predictor App", layout="wide")
-
         # Custom CSS for styling
         st.markdown("""
             <style>
-                .stApp {
-                    background-color: #f0f4f8;
-                    color: #2c3e50;
+                /* Modern Color Palette */
+                :root {
+                    --primary-color: #2c3e50;      /* Deep Blue-Gray */
+                    --secondary-color: #3498db;    /* Bright Blue */
+                    --accent-color: #2ecc71;       /* Vibrant Green */
+                    --background-color: #f4f6f7;   /* Soft Gray */
+                    --card-color: #ffffff;         /* Pure White */
+                    --text-color: #34495e;         /* Charcoal */
                 }
+
+                /* Global Styling */
+                .stApp {
+                    background-color: var(--background-color);
+                    color: var(--text-color);
+                    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                }
+
+                /* Typography */
                 .header-title {
                     text-align: center;
-                    font-size: 36px;
-                    color: #34495e;
-                    margin-bottom: 10px;
+                    font-size: 2.5rem;
+                    color: var(--primary-color);
+                    font-weight: 700;
+                    margin-bottom: 1.5rem;
+                    letter-spacing: -1px;
                 }
-                .sub-header {
-                    font-size: 28px;
-                    color: #2980b9;
+
+                /* Section Headers */
+                .group-header {
+                    font-size: 1.4rem;
+                    color: var(--secondary-color);
+                    margin-bottom: 1rem;
+                    padding-bottom: 10px;
+                    border-bottom: 3px solid var(--accent-color);
+                    font-weight: 600;
                 }
-                .container {
-                    background-color: #ffffff;
-                    padding: 20px;
+
+                /* Container Styling */
+                .stContainer {
+                    background-color: var(--card-color);
                     border-radius: 15px;
-                    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-                    margin-bottom: 20px;
+                    padding: 20px;
+                    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+                    margin-bottom: 15px;
+                    transition: all 0.3s ease;
                 }
+
+                .stContainer:hover {
+                    transform: translateY(-3px);
+                    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+                }
+
+                /* Input Styling */
+                .stTextInput > div > div > input, 
+                .stNumberInput > div > div > input, 
+                .stSelectbox > div > div > div {
+                    border-radius: 10px !important;
+                    border: 1.5px solid #e0e0e0 !important;
+                    padding: 10px 15px !important;
+                    transition: all 0.3s ease;
+                    font-size: 0.9rem;
+                }
+
+                .stTextInput > div > div > input:focus, 
+                .stNumberInput > div > div > input:focus, 
+                .stSelectbox > div > div > div:focus {
+                    border-color: var(--secondary-color) !important;
+                    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.15) !important;
+                }
+
+                /* Button Styling */
+                .stButton > button {
+                    background-color: var(--secondary-color) !important;
+                    color: white !important;
+                    border-radius: 12px !important;
+                    padding: 12px 25px !important;
+                    font-weight: 600 !important;
+                    transition: all 0.3s ease !important;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                }
+
+                .stButton > button:hover {
+                    background-color: var(--primary-color) !important;
+                    transform: translateY(-2px);
+                    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+                }
+
+                /* Prediction Section */
                 .prediction-section {
-                    background-color: #ecf0f1;
-                    padding: 15px;
-                    border-radius: 10px;
-                    text-align: center;
-                }
-                .stButton>button {
-                    background-color: #3498db;
+                    background-color: var(--accent-color);
                     color: white;
-                    border-radius: 10px;
-                    padding: 10px 20px;
-                }
-                .stButton>button:hover {
-                    background-color: #2980b9;
-                }
-                .emoji {
-                    font-size: 40px;
+                    border-radius: 12px;
+                    padding: 15px;
+                    margin-top: 20px;
+                    text-align: center;
+                    font-weight: 600;
+                    letter-spacing: 0.5px;
                 }
             </style>
         """, unsafe_allow_html=True)
 
-        # App Title
-        st.markdown('<div class="header-title">🩺 Health Predictor App</div>', unsafe_allow_html=True)
-        st.write("Welcome to the **Health Predictor App**! 🌟 Let's dive in and unlock some insights about your health. Ready? Let's go! 🚀")
+        def main():
+            # App Title
+            st.markdown('<div class="header-title">🩺 Comprehensive Health Profile</div>', unsafe_allow_html=True)
+            st.markdown("**Unlock personalized health insights with our advanced predictor! 🌟**", unsafe_allow_html=True)
 
-        # User Inputs for Risk Predictions
-        with st.container():
-            st.markdown('<div class="sub-header">Health Risk Predictions 🚀</div>', unsafe_allow_html=True)
+            # Personal Demographic Profile
+            with st.container():
+                st.markdown('<div class="group-header">👤 Demographic Overview</div>', unsafe_allow_html=True)
+                col1, col2 = st.columns(2)
+                with col1:
+                    gender = st.selectbox('Gender', ['Female', 'Male'], help="Select your gender")
+                    #age = st.number_input('Age', min_value=10, max_value=100, value=30, help="What is your current age in years?")
+                    age = st.slider('Age', 0,100,1,help="What is your current age in years?")
+                
+                with col2:
+                    occupation = st.selectbox('Occupation', ['Software Engineer', 'Doctor', 'Sales Representative', 'Teacher',
+                    'Nurse', 'Engineer', 'Accountant', 'Scientist', 'Lawyer','Salesperson', 'Manager'], help="Select the occupation type that best matches your professional field")
+                    bmi_category = st.selectbox('BMI Category', ['Underweight', 'Normal weight', 'Overweight', 'Obese'], help="Your current BMI classification")
+                    #cholesterol = st.selectbox('Cholesterol Levels', ['Normal', 'Above Normal', 'High'], help="Your Current Cholesterol levels")
+            # Physical Fitness Metrics
+            with st.container():
+                st.markdown('<div class="group-header">💪 Physical Fitness Assessment</div>', unsafe_allow_html=True)
+                col1, col2 = st.columns(2)
+                with col1:
+                    #bmi_category = st.selectbox('BMI Category', ['Normal weight', 'Overweight', 'Obese'], help="Your current BMI classification. Please use our BMI Calculator to know what category you fall under.")
+                    cholesterol = st.selectbox('Cholesterol Levels', ['Normal', 'Above Normal', 'High'], help="Your Current Cholesterol levels")
+                    #bmi_category = st.selectbox('BMI Category', ['Normal weight', 'Overweight', 'Obese'], help="Your current BMI classification. Please use our BMI Calculator to know what category you fall under.")
+                    physical_activity = st.number_input('Physical Activity (%)', min_value=0, max_value=100, value=50, help="Activity level percentage")
+                    heart_rate = st.number_input('Heart Rate (bpm)', min_value=40, max_value=180, value=72, help="Resting heart rate")
+                
+                with col2:
+                    daily_steps = st.number_input('Daily Steps', min_value=0, max_value=30000, value=5000, help="Average number of steps per day")
+                    bp_upper = st.number_input('Systolic BP', min_value=80, max_value=200, value=120, help="Systolic blood pressure")
+                    bp_lower = st.number_input('Diastolic BP', min_value=60, max_value=130, value=80, help="Diastolic blood pressure")
 
-            col1, col2 = st.columns(2)
-            with col1:
-                age = st.number_input('🔹 Age', min_value=10, max_value=100, value=30, help="How old are you? 🎂")
-                gender = st.selectbox('🔹 Gender', ['Female', 'Male'], help="Select your gender. 👩👨")
-                sleep_duration = st.number_input('🔹 Sleep Duration (hours)', min_value=0.0, max_value=12.0, value=7.0, help="How long do you sleep each night? 😴")
-                stress_level = st.slider('🔹 Stress Level (1-10)', min_value=1, max_value=10, value=5, help="Rate your stress level. 🧘‍♂️")
-                physical_activity = st.number_input('🔹 Physical Activity Level', min_value=0, max_value=100, value=50, help="Enter your physical activity level. 🏃‍♀️")
+            # Mental Wellness Indicators
+            with st.container():
+                st.markdown('<div class="group-header">🧠 Mental Wellness Profile</div>', unsafe_allow_html=True)
+                col1, col2 = st.columns(2)
+                with col1:
+                    sleep_duration = st.number_input('Average Sleep Duration (hrs)', min_value=0.0, max_value=12.0, value=7.0, help="Average hours of sleep per day")
+                    sleep_quality = st.slider('Sleep Quality', min_value=1, max_value=10, value=5, help="Rate your sleep quality on a scale of 1 to 10")
+                
+                with col2:
+                    stress_level = st.slider('Stress Level', min_value=1, max_value=10, value=5, help="Rate your overall stress on a scale of 1 to 10")
 
-            with col2:
-                daily_steps = st.number_input('🔹 Daily Steps', min_value=0, max_value=30000, value=5000, help="How many steps do you take daily? 👟")
-                heart_rate = st.number_input('🔹 Heart Rate (bpm)', min_value=40, max_value=180, value=72, help="Enter your resting heart rate. ❤️")
-                bp_upper = st.number_input('🔹 Systolic BP', min_value=80, max_value=200, value=120, help="Your systolic blood pressure. 🩸")
-                bp_lower = st.number_input('🔹 Diastolic BP', min_value=60, max_value=130, value=80, help="Your diastolic blood pressure. 💉")
-                cholesterol = st.number_input('🔹 Cholesterol Level', min_value=0.0, max_value=10.0, value=2.0, help="Your cholesterol level. 🥩")
+            # Lifestyle Choices
+            with st.container():
+                st.markdown('<div class="group-header">🌿 Lifestyle Evaluation</div>', unsafe_allow_html=True)
+                col1, col2 = st.columns(2)
+                with col1:
+                    smoking = st.selectbox('Smoking', ['No', 'Yes'], help="Smoking status")
+                
+                with col2:
+                    alcohol = st.selectbox('Alcohol Consumption', ['No', 'Yes'], help="Alcohol consumption")
 
-            if st.button("🌟 Predict Health Risks"):
-                # Placeholder for custom model predictions
-                sleep_pred = "Custom Sleep Model Output"  # Replace with your model logic
-                heart_pred = "Custom Heart Model Output"  # Replace with your model logic
-                st.markdown(f'<div class="prediction-section">🛌 Predicted Sleep Disorder: <b>{sleep_pred}</b></div>', unsafe_allow_html=True)
-                st.markdown(f'<div class="prediction-section">❤️ Predicted Heart Risk: <b>{heart_pred}</b></div>', unsafe_allow_html=True)
+            # Prediction Button
+            if st.button("🔮 Analyze Health Profile"):
+                # Placeholder for model predictions
+                st.markdown('<div class="prediction-section">Analyzing your comprehensive health data...</div>', unsafe_allow_html=True)
+                
+                # TODO: Replace with actual model predictions
+                sleep_pred = "Moderate Sleep Risk"
+                heart_pred = "Low Cardiovascular Risk"
+                
+                st.markdown(f'<div class="prediction-section">💤 Sleep Health: <b>{sleep_pred}</b></div>', unsafe_allow_html=True)
+                st.markdown(f'<div class="prediction-section">❤️ Cardiovascular Health: <b>{heart_pred}</b></div>', unsafe_allow_html=True)
+
+        if __name__ == "__main__":
+            main()
+
+
 
     with tab3:
         with st.container():
@@ -167,3 +267,134 @@ with st.container():
                     st.write("⚠️ Category: Obesity")
                 st.success("Remember, health is a journey! Keep going strong! 💪")
                 st.toast("BMI calculation complete! 🎉")
+
+    with tab4:
+        import streamlit as st
+        import re
+
+        class NutritionChatbot:
+            def __init__(self):
+                self.nutrition_rules = {
+                    r'\b(weight|lose weight|weight loss)\b': self.weight_loss_advice,
+                    r'\b(muscle|build muscle|gain muscle)\b': self.muscle_building_advice,
+                    r'\b(diet|healthy eating|nutrition)\b': self.general_nutrition_advice,
+                    r'\b(protein|proteins)\b': self.protein_advice,
+                    r'\b(vegetables|fruits|greens)\b': self.produce_advice,
+                    r'\b(breakfast|morning meal)\b': self.breakfast_advice,
+                    r'\b(hydration|water|drink)\b': self.hydration_advice
+                }
+                
+                self.default_response = (
+                    "I'm your nutrition assistant! Ask me about weight loss, muscle building, "
+                    "healthy eating, proteins, fruits and vegetables, breakfast, or hydration."
+                )
+            
+            def weight_loss_advice(self):
+                return (
+                    "For weight loss, focus on:\n"
+                    "• Calorie deficit (burn more than you consume)\n"
+                    "• High protein intake to preserve muscle\n"
+                    "• Balanced diet with whole foods\n"
+                    "• Regular exercise, mixing cardio and strength training"
+                )
+            
+            def muscle_building_advice(self):
+                return (
+                    "To build muscle effectively:\n"
+                    "• Consume 1.6-2.2g of protein per kg of body weight\n"
+                    "• Eat in a slight calorie surplus\n"
+                    "• Focus on progressive resistance training\n"
+                    "• Include complex carbs and lean proteins"
+                )
+            
+            def general_nutrition_advice(self):
+                return (
+                    "Healthy eating tips:\n"
+                    "• Eat a variety of whole foods\n"
+                    "• Balance macronutrients (proteins, carbs, fats)\n"
+                    "• Include fruits, vegetables, whole grains\n"
+                    "• Minimize processed foods and added sugars"
+                )
+            
+            def protein_advice(self):
+                return (
+                    "Protein is crucial for:\n"
+                    "• Muscle repair and growth\n"
+                    "• Metabolic health\n"
+                    "• Feeling full and satisfied\n"
+                    "Best sources: chicken, fish, eggs, legumes, tofu"
+                )
+            
+            def produce_advice(self):
+                return (
+                    "Fruits and vegetables are essential:\n"
+                    "• Rich in vitamins and minerals\n"
+                    "• High in fiber\n"
+                    "• Low in calories\n"
+                    "Aim for variety and color in your selections"
+                )
+            
+            def breakfast_advice(self):
+                return (
+                    "Best breakfast strategies:\n"
+                    "• Include protein to stay full\n"
+                    "• Add complex carbohydrates for energy\n"
+                    "• Consider eggs, oatmeal, Greek yogurt\n"
+                    "• Don't skip breakfast"
+                )
+            
+            def hydration_advice(self):
+                return (
+                    "Hydration tips:\n"
+                    "• Drink 8-10 glasses of water daily\n"
+                    "• More if you exercise or in hot weather\n"
+                    "• Water aids metabolism and energy\n"
+                    "• Herbal teas count towards hydration"
+                )
+            
+            def get_response(self, user_input):
+                user_input = user_input.lower()
+                
+                for pattern, response_func in self.nutrition_rules.items():
+                    if re.search(pattern, user_input):
+                        return response_func()
+                
+                return self.default_response
+
+        def main():
+            st.title("🥗 Nutrition Insights Chatbot")
+            
+            # Initialize chatbot
+            if 'chatbot' not in st.session_state:
+                st.session_state.chatbot = NutritionChatbot()
+            
+            # Chat history
+            if 'messages' not in st.session_state:
+                st.session_state.messages = []
+            
+            # Display chat messages
+            for message in st.session_state.messages:
+                with st.chat_message(message["role"]):
+                    st.markdown(message["content"])
+            
+            # User input
+            if prompt := st.chat_input("Ask me about nutrition..."):
+                # Add user message to chat history
+                st.session_state.messages.append({"role": "user", "content": prompt})
+                
+                # Display user message
+                with st.chat_message("user"):
+                    st.markdown(prompt)
+                
+                # Get chatbot response
+                response = st.session_state.chatbot.get_response(prompt)
+                
+                # Add bot response to chat history
+                st.session_state.messages.append({"role": "assistant", "content": response})
+                
+                # Display bot response
+                with st.chat_message("assistant"):
+                    st.markdown(response)
+
+        if __name__ == "__main__":
+            main()
