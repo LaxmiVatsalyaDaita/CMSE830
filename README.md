@@ -1,6 +1,6 @@
 # CMSE830 - Nourish and Rest (A Streamlit App)
 
-The web application has been deployed [here](https://cmse830-midterm.streamlit.app/Documentation) using *streamlit.io*
+The web application has been deployed [here](https://cmse830-midterm.streamlit.app/) using *streamlit.io*
 
 ## To run the code on local machine:
 1. Clone the Git Repository.
