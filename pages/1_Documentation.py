@@ -6,6 +6,7 @@ import matplotlib.pyplot as plt
 from sklearn.impute import KNNImputer
 from sklearn.preprocessing import LabelEncoder
 from scipy import stats
+import base64
 
 # Create tabs
 #tabs = st.tabs(["Tab 1: Sleep and Cardiovascular Health", "Tab 2: Nutrition"])
@@ -41,7 +42,7 @@ def tab3_options():
                                         "Pattern and Trend Identification"])
     return analysis_type
 
-tab1, tab2, tab3 = st.tabs(["About Datasets", "Sleep and Cardiovascular Health", "Nutrition"])
+tab1, tab2, tab3, tab4 = st.tabs(["About Datasets", "Sleep and Cardiovascular Health", "Modelling and Metrics","Nutrition"])
 
 with tab1:
     # Sidebar selection
@@ -294,27 +295,10 @@ with tab2:
         })
         return data
 
-
     data = load_data()
 
     # Streamlit app layout and configuration
     st.title('Sleep Data Analysis Dashboard')
-
-    # Sidebar for navigation and filters
-    # st.sidebar.title('Navigation')
-    # options = st.sidebar.selectbox('Select a section:', 
-    #     ['Univariate Analysis', 'Bivariate Analysis', 'Multivariate Analysis', 
-    #     'Correlation Analysis', 'Dimensionality Assessment', 
-    #     'Pattern and Trend Identification', 'Hypothesis Generation'])
-
-    # # Sidebar filters for dataset slicing
-    # min_age, max_age = st.sidebar.slider('Select Age Range', int(data['Age'].min()), int(data['Age'].max()), (25, 50))
-    # filtered_data = data[(data['Age'] >= min_age) & (data['Age'] <= max_age)]
-
-    # st.sidebar.subheader('Color Palette for Plots')
-    # palette = st.sidebar.selectbox('Select color palette:', sns.color_palette().as_hex(), index=2)
-
-
     
     filtered_data, palette, min_age, max_age, options = tab2_options()
 
@@ -554,9 +538,121 @@ with tab2:
         else:
             st.write("Result: The p-value is greater than 0.05, so we fail to reject the null hypothesis. This suggests that there is no significant relationship between Sleep Disorder and Heart Risk.")
 
-
-
 with tab3:
+    st.subheader("Using a Neural Network for Predicting Heart Risk")
+    st.markdown("""
+            The code starts by importing the necessary libraries from the TensorFlow and Keras frameworks. It then sets up a Sequential model, which is a linear stack of layers. The model has an input layer with a number of nodes equal to the number of features in the training data (x_train.shape[1]), a hidden layer with 32 nodes and ReLU activation, another hidden layer with 16 nodes and ReLU activation, and an output layer with a single node and a sigmoid activation function for binary classification.
+             
+            The model is then compiled with the Adam optimizer and binary cross-entropy loss function, which is a suitable choice for binary classification problems. The model.fit() function is used to train the model for 50 epochs, with a batch size of 16 and a validation split of 0.2. This means that 20 percent of the training data is reserved for validation, and the model's performance on the validation set is monitored during training. 
+            
+            After training, the model's performance is evaluated on the test set. The model.predict() function is used to generate predicted probabilities for the test samples, and these probabilities are then thresholded at 0.5 to obtain binary predictions (nn_y_pred). The accuracy score, classification report, and confusion matrix are then printed to the console. 
+            
+            Turning to the output, the first part of the output shows the training process of the model, with the accuracy and loss values for both the training and validation sets at each epoch. The "UserWarning" message is a warning from the Keras library about not passing the input_shape argument to a layer, which is not critical for the functioning of the model. The "Confusion Matrix" at the end of the output is a 2x2 matrix that shows the number of true positives, true negatives, false positives, and false negatives for the model's predictions on the test set. This provides a more detailed view of the model's performance beyond just the overall accuracy.
+            
+            The two plots in Image 2 provide a visual representation of the model's training and validation performance. The "Training vs. Validation Accuracy" plot shows that the training and validation accuracy converge over the course of training, indicating that the model is not overfitting to the training data. The "Training vs. Validation Loss" plot shows a similar trend, with the training and validation loss decreasing over the epochs and converging towards the end.
+             
+                
+                
+                """)
+    
+    with open("image1.png", "rb") as image_file:
+        image_data = base64.b64encode(image_file.read()).decode("utf-8")
+    
+    st.markdown(
+    f'<img src="data:image/png;base64,{image_data}" width="700">',
+    unsafe_allow_html=True,
+)
+    
+    with open("c1.png", "rb") as image_file:
+        image_data = base64.b64encode(image_file.read()).decode("utf-8")
+    
+    st.markdown(
+    f'<img src="data:image/png;base64,{image_data}" width="700">',
+    unsafe_allow_html=True,
+)
+    
+    with open("c2.png", "rb") as image_file:
+        image_data = base64.b64encode(image_file.read()).decode("utf-8")
+    
+    st.markdown(
+    f'<img src="data:image/png;base64,{image_data}" width="700">',
+    unsafe_allow_html=True,
+)
+    
+    with open("c3.png", "rb") as image_file:
+        image_data = base64.b64encode(image_file.read()).decode("utf-8")
+    
+    st.markdown(
+    f'<img src="data:image/png;base64,{image_data}" width="700">',
+    unsafe_allow_html=True,
+)
+    
+    st.markdown("""
+The Neural Network has the most well-rounded performance, scoring highly across the key metrics of accuracy, precision, recall, and F1-score. This suggests it is able to effectively identify high-risk individuals while also maintaining low false positive rates.
+
+For a cardiovascular disease prediction task, minimizing missed high-risk patients (high recall) is critically important. The Neural Network has very strong recall, outperforming the high-precision Logistic Regression model in this regard.
+
+The ROC-AUC score for the Neural Network is also competitive, indicating it has a good balance of true positive and false positive rates.
+
+While the Random Forest has the highest recall, its lower precision means it may identify more false positives. The Neural Network seems to strike a better balance.
+
+Ultimately, the Neural Network appears to be the most suitable model based on the performance tradeoffs. It provides robust, well-rounded predictive capabilities that should work well for a cardiovascular disease risk prediction use case.
+                """)
+    
+    st.subheader("Using a Random Forest Model for Sleep Disorder Risk Prediction")
+    st.markdown("""
+
+The code starts by importing the `GridSearchCV` class from the `sklearn.model_selection` module. This class is used to perform an exhaustive search over a specified parameter grid to find the best combination of hyperparameters for a given machine learning model. 
+
+The code then defines the parameter grid, which is a dictionary containing the hyperparameters to be tuned and the values to be tested for each parameter. In this case, the parameters being tuned are the number of trees in the random forest model (`n_estimators`), the maximum depth of each tree (`max_depth`), the minimum number of samples required to split an internal node (`min_samples_split`), and the minimum number of samples required to be at a leaf node (`min_samples_leaf`). 
+
+The code then creates a `RandomForestClassifier` model object and sets up the `GridSearchCV` object with the defined parameter grid, using 5-fold cross-validation to evaluate the model performance for each combination of hyperparameters.
+
+After the grid search is complete, the code prints the best hyperparameter values found by the search, which are `{'max_depth': None, 'min_samples_leaf': 1, 'min_samples_split': 5, 'n_estimators': 100}`. 
+
+This means that the best-performing random forest model had 100 trees, no maximum depth limit, a minimum of 5 samples required to split an internal node, and a minimum of 1 sample required to be at a leaf node. The code then creates a new `RandomForestClassifier` model using the best hyperparameters and evaluates its performance on the test set, printing an accuracy score of 95%. 
+
+This indicates that the optimized random forest model achieves an accuracy of 95% on the test set, which is a strong performance. The grid search process is useful for finding the best combination of hyperparameters for a given machine learning model, as the hyperparameters can have a significant impact on the model's performance.
+""")
+    
+    with open("plot-s.png", "rb") as image_file:
+        image_data = base64.b64encode(image_file.read()).decode("utf-8")
+    
+    st.markdown(
+    f'<img src="data:image/png;base64,{image_data}" width="700">',
+    unsafe_allow_html=True,
+)
+    
+    with open("b1.png", "rb") as image_file:
+        image_data = base64.b64encode(image_file.read()).decode("utf-8")
+    
+    st.markdown(
+    f'<img src="data:image/png;base64,{image_data}" width="700">',
+    unsafe_allow_html=True,
+)
+    
+    with open("b2.png", "rb") as image_file:
+        image_data = base64.b64encode(image_file.read()).decode("utf-8")
+    
+    st.markdown(
+    f'<img src="data:image/png;base64,{image_data}" width="700">',
+    unsafe_allow_html=True,
+)
+    
+    st.markdown("""
+Based on the model performance comparison plot, the Random Forest model appears to be the preferred model overall. The Random Forest model has higher scores across most of the evaluation metrics compared to the Logistic Regression model, including higher Accuracy, Precision, Recall, F1-Score, and ROC-AUC.
+
+The key observations are:
+
+- The Random Forest model consistently outperforms the Logistic Regression model across all the evaluation metrics shown.
+- The Random Forest model has the highest ROC-AUC score, indicating better discriminative power and overall performance.
+- The Precision, Recall, and F1-Score are all higher for the Random Forest model, suggesting better balance between true positives, false positives, and false negatives.
+- The Accuracy score is also higher for the Random Forest model, meaning it correctly classifies a greater proportion of the test samples.
+
+Based on these results, the Random Forest model appears to be the preferred choice for this problem, as it demonstrates superior performance compared to the Logistic Regression model across the various evaluation metrics. The clear and consistent advantage of the Random Forest model over Logistic Regression makes it the recommended model for further deployment and use.
+""")
+
+with tab4:
     import streamlit as st
     import pandas as pd
     import numpy as np

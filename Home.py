@@ -6,6 +6,57 @@ import matplotlib.pyplot as plt
 from sklearn.impute import KNNImputer
 from sklearn.preprocessing import LabelEncoder
 from scipy import stats
+import pickle
+
+import warnings
+warnings.filterwarnings("ignore")
+
+loaded_model_sleep = pickle.load(open('sleep_rf_model.sav', 'rb')) # 'rb' means reading the binary format
+
+from tensorflow.keras.models import load_model
+
+# Load the saved model
+loaded_model_heart = load_model('heart_risk_model.h5')
+
+with open('scaler.pkl', 'rb') as file:
+    scaler = pickle.load(file)
+
+
+def sleep_disorder_prediction(input_data):
+    # testing our loaded model
+    input_data_as_np_array = np.asarray(input_data) 
+
+    input_data_as_np_array = np.asarray(input_data).reshape(1, -1) 
+
+    input_data_scaled = scaler.transform(input_data_as_np_array)
+
+
+    prediction = loaded_model_sleep.predict(input_data_scaled)
+    print(prediction)
+
+    if (prediction[0] == 0):
+        return 'the person is not at a risk of sleep disorder'
+    else:
+        return 'the person is at a risk of sleep disorder'
+
+
+
+def heart_risk_prediction(input_data):
+    input_data_as_np_array = np.asarray(input_data) 
+
+    input_data_as_np_array = np.asarray(input_data).reshape(1, -1) 
+
+    input_data_scaled = scaler.transform(input_data_as_np_array)
+
+
+    prediction = loaded_model_heart.predict(input_data_scaled)
+    print(prediction)
+
+    if (prediction[0] == 0):
+        return 'the person is not at a cardiovascular risk'
+    else:
+        return 'the person is at a cardiovascular risk'
+    
 
 st.set_page_config(page_title="Health Predictor App", layout="wide")
 
@@ -23,6 +74,18 @@ def load_data():
 
 df = load_data()
 
+st.sidebar.markdown("""
+
+📊 Health Predictor Overview
+Welcome to the Health Predictor App! This tool helps you analyze key health metrics related to sleep and cardiovascular health, guiding you toward better well-being.
+
+Key Features:
+- 🔍 Risk Prediction: Assess your risk for sleep disorders and cardiovascular issues using personalized inputs.
+- ⚖️ BMI Calculator: Calculate and understand your BMI based on height and weight.
+- 🍎 Nutrition Tips: Get tailored nutrition advice for a healthier lifestyle.
+
+""")
+st.sidebar.markdown("*Created by Vatsalya Daita*")
 # Create tabs for navigation
 with st.container():
     tab1, tab2, tab3, tab4 = st.tabs(["Overview", "Risk Prediction", "BMI Calculator", "Ask for Nutrition Tips"])
@@ -187,7 +250,7 @@ with st.container():
                 with col2:
                     occupation = st.selectbox('Occupation', ['Software Engineer', 'Doctor', 'Sales Representative', 'Teacher',
                     'Nurse', 'Engineer', 'Accountant', 'Scientist', 'Lawyer','Salesperson', 'Manager'], help="Select the occupation type that best matches your professional field")
-                    bmi_category = st.selectbox('BMI Category', ['Underweight', 'Normal weight', 'Overweight', 'Obese'], help="Your current BMI classification")
+                    bmi_category = st.selectbox('BMI Category', ['Normal Weight', 'Overweight', 'Obese'], help="Your current BMI classification")
                     #cholesterol = st.selectbox('Cholesterol Levels', ['Normal', 'Above Normal', 'High'], help="Your Current Cholesterol levels")
             # Physical Fitness Metrics
             with st.container():
@@ -226,17 +289,83 @@ with st.container():
                 with col2:
                     alcohol = st.selectbox('Alcohol Consumption', ['No', 'Yes'], help="Alcohol consumption")
 
+            
+
+            ## Encoding
+            
+            if (gender=='Male'):
+                genderEncoded = 1
+            elif (gender=='Female'):
+                genderEncoded = 0
+
+            if occupation == 'Accountant':
+                occupationEncoded = 0
+            elif occupation == 'Doctor':
+                occupationEncoded = 1
+            elif occupation == 'Engineer':
+                occupationEncoded = 2
+            elif occupation == 'Lawyer':
+                occupationEncoded = 3
+            elif occupation == 'Manager':
+                occupationEncoded = 4
+            elif occupation == 'Nurse':
+                occupationEncoded = 5
+            elif occupation == 'Sales Representative':
+                occupationEncoded = 6
+            elif occupation == 'Salesperson':
+                occupationEncoded = 7
+            elif occupation == 'Scientist':
+                occupationEncoded = 8
+            elif occupation == 'Software Engineer':
+                occupationEncoded = 9
+            elif occupation == 'Teacher':
+                occupationEncoded = 10
+
+            
+            if (bmi_category=='Overweight'):
+                bmiEncoded = 2
+            elif (bmi_category=='Normal Weight'):
+                bmiEncoded = 0
+            elif (bmi_category=='Obese'):
+                bmiEncoded = 1
+
+
+            if (cholesterol=='Normal'):
+                cholesterolEncoded = 0
+            elif (cholesterol=='Above Normal'):
+                cholesterolEncoded = 1
+            elif (cholesterol=='High'):
+                cholesterolEncoded = 2
+
+            if (alcohol=='No'):
+                alcoholEncoded = 0
+            elif (alcohol=='Yes'):
+                alcoholEncoded = 1
+
+            if (smoking=='No'):
+                smokingEncoded = 0
+            elif (smoking=='Yes'):
+                smokingEncoded = 1
+
+
+            input_features = [genderEncoded, age, occupationEncoded, sleep_duration, sleep_quality, physical_activity, stress_level, bmiEncoded, heart_rate, daily_steps, bp_upper,	bp_lower, cholesterolEncoded, smokingEncoded, alcoholEncoded]
+            diagnosis_heart = '' # creating an empty string to store the result for heart risk
+            diagnosis_sleep = '' # creating empty string for sleep disorder
+
+
             # Prediction Button
             if st.button("🔮 Analyze Health Profile"):
                 # Placeholder for model predictions
                 st.markdown('<div class="prediction-section">Analyzing your comprehensive health data...</div>', unsafe_allow_html=True)
                 
                 # TODO: Replace with actual model predictions
-                sleep_pred = "Moderate Sleep Risk"
-                heart_pred = "Low Cardiovascular Risk"
+                diagnosis_sleep = sleep_disorder_prediction(input_features)
+                diagnosis_heart = heart_risk_prediction(input_features)
                 
-                st.markdown(f'<div class="prediction-section">💤 Sleep Health: <b>{sleep_pred}</b></div>', unsafe_allow_html=True)
-                st.markdown(f'<div class="prediction-section">❤️ Cardiovascular Health: <b>{heart_pred}</b></div>', unsafe_allow_html=True)
+                st.markdown(f'<div class="prediction-section">💤 Sleep Health: <b>{diagnosis_sleep}</b></div>', unsafe_allow_html=True)
+                st.markdown(f'<div class="prediction-section">❤️ Cardiovascular Health: <b>{diagnosis_heart}</b></div>', unsafe_allow_html=True)
+                
+
 
         if __name__ == "__main__":
             main()
