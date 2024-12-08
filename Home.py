@@ -76,7 +76,7 @@ df = load_data()
 
 st.sidebar.markdown("""
 
-📊 Health Predictor Overview
+📊 Overview
 Welcome to the Health Predictor App! This tool helps you analyze key health metrics related to sleep and cardiovascular health, guiding you toward better well-being.
 
 Key Features:
@@ -88,39 +88,72 @@ Key Features:
 st.sidebar.markdown("*Created by Vatsalya Daita*")
 # Create tabs for navigation
 with st.container():
-    tab1, tab2, tab3, tab4 = st.tabs(["Overview", "Risk Prediction", "BMI Calculator", "Ask for Nutrition Tips"])
+    tab1, tab2, tab3, tab4 = st.tabs(["Welcome", "Risk Prediction", "BMI Calculator", "Ask for Nutrition Tips"])
 
     with tab1:
         st.markdown("""
-        # 💤 Why Sleep and Nutrition Matter for Overall Well-Being 🥦
+        # Welcome to **SnugFit** 💤❤️🥦  
 
-        Sleep and nutrition are two fundamental pillars of health that significantly impact our physical, mental, and emotional well-being. Understanding the relationship between sleep and various health factors can empower individuals to make informed lifestyle choices that enhance their quality of life.
+### A Holistic Approach to Better Sleep, Nutrition, and Cardiovascular Health  
 
-        ## The Role of Sleep
+---
 
-        Sleep is a vital process that allows the body to recover, rejuvenate, and maintain optimal function. Adequate sleep is essential for various reasons:
+## 🌟 **About the App**  
+SnugFit is a comprehensive health dashboard designed to provide personalized insights into your sleep patterns, cardiovascular health, and nutrition. By leveraging data-driven predictions and recommendations, SnugFit empowers you to make informed lifestyle choices for improved well-being.  
 
-        - **Physical Health:** Quality sleep supports immune function, hormonal balance, and metabolic health. It plays a crucial role in tissue repair, muscle growth, and overall bodily recovery.
+Key Features:  
+- **💤 Sleep Disorder & Heart Risk Predictions:** Assess your potential health risks based on personalized inputs.  
+- **⚖️ BMI Calculator:** Easily calculate your Body Mass Index (BMI) to understand your weight classification.  
+- **🍎 Nutrition Insights:** Get tailored advice to align your diet with your health goals.  
 
-        - **Mental Clarity:** Sleep is integral to cognitive processes, including memory consolidation, problem-solving, and decision-making. A well-rested brain is more alert and capable of focusing on tasks.
+---
 
-        - **Emotional Regulation:** Sleep influences mood and emotional resilience. Insufficient sleep can lead to irritability, anxiety, and increased stress levels, making it harder to cope with daily challenges.
+## 💤 **The Importance of Sleep**  
+Sleep is more than just rest—it's a cornerstone of your overall health. Here’s why prioritizing sleep is essential:  
 
-        - **Chronic Disease Prevention:** Poor sleep patterns are linked to a range of chronic conditions, including obesity, diabetes, cardiovascular diseases, and mental health disorders. Prioritizing sleep can help mitigate these risks.
+- **Enhances Physical Health:** Sleep aids in tissue repair, muscle growth, and hormonal balance, reducing risks of chronic diseases like diabetes and heart issues.  
+- **Boosts Cognitive Function:** Quality sleep sharpens memory, decision-making, and problem-solving abilities.  
+- **Improves Emotional Well-being:** Sleep regulates mood and reduces stress, promoting emotional resilience.  
+- **Prevents Chronic Conditions:** Poor sleep patterns are linked to hypertension, obesity, and mental health disorders.  
 
-        ## The Importance of Nutrition
+---
 
-        Nutrition provides the essential nutrients needed for the body to function effectively. A balanced diet is crucial for overall health and well-being:
+## ❤️ **The Connection Between Sleep & Cardiovascular Health**  
+Insufficient or disrupted sleep can directly impact your heart health by:  
+- Raising blood pressure and cholesterol levels.  
+- Increasing the risk of stroke and heart disease.  
+By recognizing sleep’s influence on cardiovascular health, SnugFit helps you take proactive measures to reduce these risks.  
 
-        - **Energy and Vitality:** The food we consume fuels our bodies, providing the energy required for daily activities. Proper nutrition ensures that we have the stamina to engage in physical and mental tasks.
+---
 
-        - **Disease Prevention:** A well-rounded diet rich in fruits, vegetables, whole grains, and lean proteins can lower the risk of chronic diseases and promote overall health. Nutrient-dense foods support the immune system and reduce inflammation.
+## 🥦 **The Role of Nutrition**  
+Your diet is the fuel that powers your body. Here’s how balanced nutrition supports your health:  
+- **Energy & Immunity:** Proper nutrition boosts stamina and strengthens the immune system.  
+- **Chronic Disease Prevention:** A nutrient-rich diet lowers the risk of conditions like diabetes, obesity, and heart disease.  
+- **Mental Health Benefits:** Nutrients like omega-3s and magnesium improve mood and cognitive function.  
+- **Promotes Better Sleep:** Certain foods, such as those rich in tryptophan or magnesium, enhance sleep quality.  
 
-        - **Mental Health:** Emerging research suggests a strong connection between nutrition and mental health. Nutrients such as omega-3 fatty acids, vitamins, and minerals have been linked to improved mood and cognitive function.
+By integrating sleep and nutrition insights, SnugFit fosters a holistic approach to health.  
 
-        - **Healthy Sleep Patterns:** Certain foods and nutrients can influence sleep quality. For example, foods rich in magnesium and tryptophan can promote better sleep, while excessive caffeine or sugar can disrupt it.
+---
 
-        The synergy between sleep and nutrition is crucial for achieving and maintaining overall well-being. By recognizing the importance of these elements, individuals can take proactive steps to improve their health and enhance their quality of life. This dashboard serves as a resource to explore insights related to sleep and nutrition, empowering users to make informed choices that foster a healthier lifestyle.
+## 🧭 **How to Use SnugFit**  
+1. **Navigate Through Tabs:**  
+   - **Overview:** Learn about the synergy between sleep, nutrition, and health.  
+   - **Risk Prediction:** Enter your details to assess risks for sleep disorders and cardiovascular health.  
+   - **BMI Calculator:** Input your height and weight to calculate your BMI.  
+   - **Nutrition Tips:** Ask for personalized dietary advice.  
+
+2. **Enter Your Details:** Use the intuitive input fields to provide your information.  
+
+3. **Get Insights:** View easy-to-understand predictions and actionable recommendations to improve your health.  
+
+4. **Explore Recommendations:** Use the insights to enhance your sleep, nutrition, and overall wellness.  
+
+---
+
+### 🛠️ **Created by Vatsalya Daita**  
+Let SnugFit guide you on your journey to a healthier and happier life! 🌱✨  
         """
         )
 
