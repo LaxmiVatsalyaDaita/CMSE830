@@ -59,7 +59,7 @@ with tab1:
     def load_data():
         #data = pd.read_csv('new_merged.csv')
 
-        url = "https://raw.githubusercontent.com/LaxmiVatsalyaDaita/CMSE830/main/new_merged.csv"
+        url = "https://raw.githubusercontent.com/LaxmiVatsalyaDaita/CMSE830/main/Datasets/new_merged.csv"
         data = pd.read_csv(url, delimiter=",")
         df = data.copy()
         df.drop(['id', 'age', 'gender', 'age_years', 'BMI', 'height', 'weight'], axis=1, inplace=True)
@@ -111,8 +111,8 @@ with tab1:
         ## 4. Basic Descriptive Statistics
         Descriptive statistics such as mean, median, and standard deviation were calculated for each numeric variable.
         """)
-        sleep = pd.read_csv('https://raw.githubusercontent.com/LaxmiVatsalyaDaita/CMSE830/main/Sleep_health_and_lifestyle_dataset.csv')
-        heart = pd.read_csv('https://raw.githubusercontent.com/LaxmiVatsalyaDaita/CMSE830/main/cardio_train.csv', delimiter=";")
+        sleep = pd.read_csv('https://raw.githubusercontent.com/LaxmiVatsalyaDaita/CMSE830/main/Datasets/Sleep_health_and_lifestyle_dataset.csv')
+        heart = pd.read_csv('https://raw.githubusercontent.com/LaxmiVatsalyaDaita/CMSE830/main/Datasets/cardio_train.csv', delimiter=";")
         st.write(sleep.describe())
         st.write(heart.describe())
 
@@ -215,7 +215,7 @@ with tab1:
         In this section, we take an initial look at the nutrition dataset. The dataset used in this dashboard is the cleaned version of the dataset by Niharika Pandit from Kaggle, and can be accessed [here](https://www.kaggle.com/datasets/niharika41298/nutrition-details-for-most-common-foods). It contains information on various food items, including nutritional values such as Calories, Protein, Fat, Saturated Fat, Fiber, and Carbohydrates. Each food item is categorized to facilitate comparative analysis across different food groups. The dataset was scraped from Wikipedia. The preview below shows the first few rows, 
         giving a sense of the structure of the data, including column names and sample values.
         """)
-        nutrition_data = pd.read_csv("nutrients_csvfile.csv")
+        nutrition_data = pd.read_csv("https://raw.githubusercontent.com/LaxmiVatsalyaDaita/CMSE830/main/Datasets/nutrients_csvfile.csv")
         st.write(nutrition_data.head())
 
         # Summary Statistics
@@ -555,7 +555,7 @@ with tab3:
                 
                 """)
     
-    with open("image1.png", "rb") as image_file:
+    with open("Results/image1.png", "rb") as image_file:
         image_data = base64.b64encode(image_file.read()).decode("utf-8")
     
     st.markdown(
@@ -563,7 +563,7 @@ with tab3:
     unsafe_allow_html=True,
 )
     
-    with open("c1.png", "rb") as image_file:
+    with open("Results/c1.png", "rb") as image_file:
         image_data = base64.b64encode(image_file.read()).decode("utf-8")
     
     st.markdown(
@@ -571,7 +571,7 @@ with tab3:
     unsafe_allow_html=True,
 )
     
-    with open("c2.png", "rb") as image_file:
+    with open("Results/c2.png", "rb") as image_file:
         image_data = base64.b64encode(image_file.read()).decode("utf-8")
     
     st.markdown(
@@ -579,7 +579,7 @@ with tab3:
     unsafe_allow_html=True,
 )
     
-    with open("c3.png", "rb") as image_file:
+    with open("Results/c3.png", "rb") as image_file:
         image_data = base64.b64encode(image_file.read()).decode("utf-8")
     
     st.markdown(
@@ -615,7 +615,7 @@ This means that the best-performing random forest model had 100 trees, no maximu
 This indicates that the optimized random forest model achieves an accuracy of 95% on the test set, which is a strong performance. The grid search process is useful for finding the best combination of hyperparameters for a given machine learning model, as the hyperparameters can have a significant impact on the model's performance.
 """)
     
-    with open("plot-s.png", "rb") as image_file:
+    with open("Results/plot-s.png", "rb") as image_file:
         image_data = base64.b64encode(image_file.read()).decode("utf-8")
     
     st.markdown(
@@ -623,7 +623,7 @@ This indicates that the optimized random forest model achieves an accuracy of 95
     unsafe_allow_html=True,
 )
     
-    with open("b1.png", "rb") as image_file:
+    with open("Results/b1.png", "rb") as image_file:
         image_data = base64.b64encode(image_file.read()).decode("utf-8")
     
     st.markdown(
@@ -631,7 +631,7 @@ This indicates that the optimized random forest model achieves an accuracy of 95
     unsafe_allow_html=True,
 )
     
-    with open("b2.png", "rb") as image_file:
+    with open("Results/b2.png", "rb") as image_file:
         image_data = base64.b64encode(image_file.read()).decode("utf-8")
     
     st.markdown(
@@ -886,19 +886,6 @@ with tab4:
             fig = px.box(df, y='Category', x=nutrient)
             fig.update_layout(title=f"{nutrient} Distribution Across Categories")
             st.plotly_chart(fig, use_container_width=True)
-
-        # elif analysis_type == "Hypothesis Generation":
-        #     st.header("7. Hypothesis Generation")
-            
-        #     st.write("Based on the exploratory data analysis, we can generate the following hypotheses:")
-            
-        #     st.write("1. There might be a strong positive correlation between calorie content and fat content in foods.")
-        #     st.write("2. Certain food categories may have significantly higher protein content than others.")
-        #     st.write("3. The fiber content might be inversely related to the calorie density of foods.")
-        #     st.write("4. There could be distinct clusters of foods based on their nutritional profiles.")
-            
-        #     st.write("To investigate these hypotheses, we would need to perform more detailed statistical analyses, "
-        #              "such as hypothesis tests, regression analyses, or clustering algorithms.")
 
         # Footer
         st.markdown("---")

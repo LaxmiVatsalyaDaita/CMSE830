@@ -11,14 +11,14 @@ import pickle
 import warnings
 warnings.filterwarnings("ignore")
 
-loaded_model_sleep = pickle.load(open('sleep_rf_model.sav', 'rb')) # 'rb' means reading the binary format
+loaded_model_sleep = pickle.load(open('Models/sleep_rf_model.sav', 'rb')) # 'rb' means reading the binary format
 
 from tensorflow.keras.models import load_model
 
 # Load the saved model
-loaded_model_heart = load_model('heart_risk_model.h5')
+loaded_model_heart = load_model('Models/heart_risk_model.h5')
 
-with open('scaler.pkl', 'rb') as file:
+with open('Models/scaler.pkl', 'rb') as file:
     scaler = pickle.load(file)
 
 
@@ -65,7 +65,7 @@ st.set_page_config(page_title="SnugFit", layout="wide", page_icon="💤")
 def load_data():
     #data = pd.read_csv('new_merged.csv')
 
-    url = "https://raw.githubusercontent.com/LaxmiVatsalyaDaita/CMSE830/main/new_merged.csv"
+    url = "https://raw.githubusercontent.com/LaxmiVatsalyaDaita/CMSE830/main/Datasets/new_merged.csv"
     data = pd.read_csv(url, delimiter=",")
     df = data.copy()
     df.drop(['id', 'age', 'gender', 'age_years', 'BMI', 'height', 'weight'], axis=1, inplace=True)
@@ -421,12 +421,12 @@ Let SnugFit guide you on your journey to a healthier and happier life! 🌱✨
         class NutritionChatbot:
             def __init__(self):
                 self.nutrition_rules = {
-                    r'\b(weight|lose weight|weight loss)\b': self.weight_loss_advice,
-                    r'\b(muscle|build muscle|gain muscle)\b': self.muscle_building_advice,
-                    r'\b(diet|healthy eating|nutrition)\b': self.general_nutrition_advice,
+                    r'\b(weight|lose\sweight|weight\sloss)\b': self.weight_loss_advice,
+                    r'\b(muscle|build\smuscle|gain\smuscle)\b': self.muscle_building_advice,
+                    r'\b(diet|healthy\seating|nutrition)\b': self.general_nutrition_advice,
                     r'\b(protein|proteins)\b': self.protein_advice,
                     r'\b(vegetables|fruits|greens)\b': self.produce_advice,
-                    r'\b(breakfast|morning meal)\b': self.breakfast_advice,
+                    r'\b(breakfast|morning\smeal)\b': self.breakfast_advice,
                     r'\b(hydration|water|drink)\b': self.hydration_advice
                 }
                 
@@ -508,7 +508,7 @@ Let SnugFit guide you on your journey to a healthier and happier life! 🌱✨
                 return self.default_response
 
         def main():
-            st.title("🥗 Nutrition Insights Chatbot")
+            st.title("🥗 NutriBuddy")
             
             # Initialize chatbot
             if 'chatbot' not in st.session_state:
