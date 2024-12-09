@@ -11,14 +11,14 @@ import pickle
 import warnings
 warnings.filterwarnings("ignore")
 
-loaded_model_sleep = pickle.load(open('Models/sleep_rf_model.sav', 'rb')) # 'rb' means reading the binary format
+loaded_model_sleep = pickle.load(open('https://github.com/LaxmiVatsalyaDaita/CMSE830/blob/main/Models/sleep_rf_model.sav', 'rb')) # 'rb' means reading the binary format
 
 from tensorflow.keras.models import load_model
 
 # Load the saved model
-loaded_model_heart = load_model('Models/heart_risk_model.h5')
+loaded_model_heart = load_model('https://github.com/LaxmiVatsalyaDaita/CMSE830/blob/main/Models/heart_risk_model.h5')
 
-with open('Models/scaler.pkl', 'rb') as file:
+with open('https://github.com/LaxmiVatsalyaDaita/CMSE830/blob/main/Models/scaler.pkl', 'rb') as file:
     scaler = pickle.load(file)
 
 
