@@ -58,7 +58,7 @@ def heart_risk_prediction(input_data):
         return 'the person is at a cardiovascular risk'
     
 
-st.set_page_config(page_title="Health Predictor App", layout="wide")
+st.set_page_config(page_title="SnugFit", layout="wide", page_icon="💤")
 
 # Load the data
 @st.cache_data
@@ -77,7 +77,8 @@ df = load_data()
 st.sidebar.markdown("""
 
 📊 Overview
-Welcome to the Health Predictor App! This tool helps you analyze key health metrics related to sleep and cardiovascular health, guiding you toward better well-being.
+                    
+Welcome to SnugFit! This tool helps you analyze key health metrics related to sleep and cardiovascular health, guiding you toward better well-being.
 
 Key Features:
 - 🔍 Risk Prediction: Assess your risk for sleep disorders and cardiovascular issues using personalized inputs.
@@ -92,23 +93,12 @@ with st.container():
 
     with tab1:
         st.markdown("""
-        # Welcome to **SnugFit** 💤❤️🥦  
+                    <div style="text-align: center;">
+        <h1>💤 <strong>SnugFit</strong> 🥦</h1>
+        <h5>A Holistic Approach to Better Sleep, Nutrition, and Cardiovascular Health</h3>
+    </div>
 
-### A Holistic Approach to Better Sleep, Nutrition, and Cardiovascular Health  
-
----
-
-## 🌟 **About the App**  
-SnugFit is a comprehensive health dashboard designed to provide personalized insights into your sleep patterns, cardiovascular health, and nutrition. By leveraging data-driven predictions and recommendations, SnugFit empowers you to make informed lifestyle choices for improved well-being.  
-
-Key Features:  
-- **💤 Sleep Disorder & Heart Risk Predictions:** Assess your potential health risks based on personalized inputs.  
-- **⚖️ BMI Calculator:** Easily calculate your Body Mass Index (BMI) to understand your weight classification.  
-- **🍎 Nutrition Insights:** Get tailored advice to align your diet with your health goals.  
-
----
-
-## 💤 **The Importance of Sleep**  
+### 💤 **Why Sleep is Essential**  
 Sleep is more than just rest—it's a cornerstone of your overall health. Here’s why prioritizing sleep is essential:  
 
 - **Enhances Physical Health:** Sleep aids in tissue repair, muscle growth, and hormonal balance, reducing risks of chronic diseases like diabetes and heart issues.  
@@ -118,7 +108,7 @@ Sleep is more than just rest—it's a cornerstone of your overall health. Here�
 
 ---
 
-## ❤️ **The Connection Between Sleep & Cardiovascular Health**  
+### ❤️ **The Connection Between Sleep & Cardiovascular Health**  
 Insufficient or disrupted sleep can directly impact your heart health by:  
 - Raising blood pressure and cholesterol levels.  
 - Increasing the risk of stroke and heart disease.  
@@ -126,20 +116,12 @@ By recognizing sleep’s influence on cardiovascular health, SnugFit helps you t
 
 ---
 
-## 🥦 **The Role of Nutrition**  
-Your diet is the fuel that powers your body. Here’s how balanced nutrition supports your health:  
-- **Energy & Immunity:** Proper nutrition boosts stamina and strengthens the immune system.  
-- **Chronic Disease Prevention:** A nutrient-rich diet lowers the risk of conditions like diabetes, obesity, and heart disease.  
-- **Mental Health Benefits:** Nutrients like omega-3s and magnesium improve mood and cognitive function.  
-- **Promotes Better Sleep:** Certain foods, such as those rich in tryptophan or magnesium, enhance sleep quality.  
-
 By integrating sleep and nutrition insights, SnugFit fosters a holistic approach to health.  
 
 ---
 
-## 🧭 **How to Use SnugFit**  
+### 🧭 **How to Use SnugFit**  
 1. **Navigate Through Tabs:**  
-   - **Overview:** Learn about the synergy between sleep, nutrition, and health.  
    - **Risk Prediction:** Enter your details to assess risks for sleep disorders and cardiovascular health.  
    - **BMI Calculator:** Input your height and weight to calculate your BMI.  
    - **Nutrition Tips:** Ask for personalized dietary advice.  
@@ -152,9 +134,11 @@ By integrating sleep and nutrition insights, SnugFit fosters a holistic approach
 
 ---
 
-### 🛠️ **Created by Vatsalya Daita**  
+#### 🛠️ **Created by Vatsalya Daita**  
 Let SnugFit guide you on your journey to a healthier and happier life! 🌱✨  
         """
+                    ,
+    unsafe_allow_html=True
         )
 
     with tab2:
@@ -268,7 +252,7 @@ Let SnugFit guide you on your journey to a healthier and happier life! 🌱✨
 
         def main():
             # App Title
-            st.markdown('<div class="header-title">🩺 Comprehensive Health Profile</div>', unsafe_allow_html=True)
+            st.markdown('<div class="header-title">🩺 Health Profile</div>', unsafe_allow_html=True)
             st.markdown("**Unlock personalized health insights with our advanced predictor! 🌟**", unsafe_allow_html=True)
 
             # Personal Demographic Profile
