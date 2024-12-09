@@ -14,7 +14,9 @@ The web application has been deployed [here](https://cmse830-snugfit.streamlit.a
 5. The plots for the performance metrics can be found in Results
 
 ---
-# 🌟 SnugFit  
+<p align="center"> 
+  <h1> 🌟 SnugFit </h1> 
+</p>
 
 Welcome to the **SnugFit**! A Holistic Approach to Better Sleep, Nutrition, and Cardiovascular Health. This Streamlit app is your one-stop platform for personalized health predictions, BMI calculations, and actionable nutrition advice. Whether you're curious about your heart health, want insights into sleep disorders, or need help with healthy eating, we've got you covered.
 
