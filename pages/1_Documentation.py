@@ -7,7 +7,7 @@ from sklearn.impute import KNNImputer
 from sklearn.preprocessing import LabelEncoder
 from scipy import stats
 import base64
-
+import urllib.error
 # Create tabs
 #tabs = st.tabs(["Tab 1: Sleep and Cardiovascular Health", "Tab 2: Nutrition"])
 
